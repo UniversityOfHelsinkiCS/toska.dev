@@ -1,0 +1,13 @@
+{
+  "name": "terho",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "serve public -l 3004"
+  },
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: terho-svc
+spec:
+  selector:
+    app: terho
+  ports:
+    - port: 3002
+      protocol: TCP
+      targetPort: 80
+  type: ClusterIP

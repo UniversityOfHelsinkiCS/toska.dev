@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mikko-deployment
+  labels:
+    app: mikko
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mikko
+  template:
+    metadata:
+      labels:
+        app: mikko
+    spec:
+      containers:
+      - name: mikko
+        image: toska/toska-dev-mikko
+        ports:
+        - containerPort: 3003
+        resources:
+          limits:
+           memory: "128Mi"
+           cpu: "250m"

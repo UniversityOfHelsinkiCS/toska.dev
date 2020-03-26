@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terho-deployment
+  labels:
+    app: terho
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: terho
+  template:
+    metadata:
+      labels:
+        app: terho
+    spec:
+      containers:
+      - name: terho
+        image: toska/toska-dev-terho
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+           memory: "128Mi"
+           cpu: "250m"

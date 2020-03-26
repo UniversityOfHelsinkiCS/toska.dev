@@ -21,3 +21,33 @@ services:
       - ./jami:/usr/src/app
     ports:
       - 3001:3001
+  tuomo-svc:
+    build:
+      context: ./tuomo
+      dockerfile: config/dev.Dockerfile
+    image: toskadev_tuomo_dev
+    container_name: toskadev_tuomo_dev
+    volumes:
+      - ./tuomo:/usr/src/app
+    ports:
+      - 3002:3002
+  mikko-svc:
+    build:
+      context: ./mikko
+      dockerfile: config/dev.Dockerfile
+    image: toskadev_mikko_dev
+    container_name: toskadev_mikko_dev
+    volumes:
+      - ./mikko:/usr/src/app
+    ports:
+      - 3003:3003
+  terho-svc:
+    build:
+      context: ./terho
+      dockerfile: config/dev.Dockerfile
+    image: toskadev_terho_dev
+    container_name: toskadev_terho_dev
+    volumes:
+      - ./terho:/usr/src/app
+    ports:
+      - 3004:3004
