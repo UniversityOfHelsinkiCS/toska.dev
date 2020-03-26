@@ -14,4 +14,4 @@ COPY --from=install /usr/src/app/ /usr/src/app/
 
 COPY . .
 
-RUN npm run start
+CMD ["npm", "start"]
