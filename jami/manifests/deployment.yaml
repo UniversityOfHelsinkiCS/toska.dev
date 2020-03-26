@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: jami
-        image: jakousa/k8stestjami
+        image: toska/toska-dev-jami
         ports:
         - containerPort: 80
         resources:

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: toska-dev
-        image: jakousa/k8stestroot
+        image: toska/toska-dev-root
         ports:
         - containerPort: 3000
         resources:
