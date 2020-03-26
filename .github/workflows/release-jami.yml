@@ -4,23 +4,22 @@ on:
   push:
     branches: 
       - master
-#    paths:
-#      - 'jami/*'
+    paths:
+      - 'jami/*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: Azure/docker-login@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - run: |
-        cd jami
-        docker build . -t toska/toska-dev-jami:${{ github.sha }}
-        docker push toska/toska-dev-jami:${{ github.sha }}
+    - uses: whoan/docker-build-with-cache-action@v4
+      with:
+        username: "${{ secrets.DOCKER_USERNAME }}"
+        password: "${{ secrets.DOCKER_PASSWORD }}"
+        image_name: toska/toska-dev-jami
+        image_tag: ${{ github.sha }}
+        context: jami
 
     - uses: Azure/k8s-set-context@v1
       with:
