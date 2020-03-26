@@ -2,7 +2,8 @@ name: Release root
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
     paths:
       - 'root/*'
 
