@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import kuva from '../public/test.jpg'
 
 const Home = () => <div>
-    Github actions paths test!
+    Github actions paths!
     <img style={{ width: '10em' }} src={kuva}></img>
 </div>
 
