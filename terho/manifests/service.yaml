@@ -6,7 +6,7 @@ spec:
   selector:
     app: terho
   ports:
-    - port: 3002
+    - port: 3004
       protocol: TCP
       targetPort: 80
   type: ClusterIP
