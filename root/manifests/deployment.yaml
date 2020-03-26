@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toska-dev-deployment
+  labels:
+    app: toska-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: toska-dev
+  template:
+    metadata:
+      labels:
+        app: toska-dev
+    spec:
+      containers:
+      - name: toska-dev
+        image: jakousa/k8stestroot
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+           memory: "128Mi"
+           cpu: "250m"

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jami-deployment
+  labels:
+    app: jami
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jami
+  template:
+    metadata:
+      labels:
+        app: jami
+    spec:
+      containers:
+      - name: jami
+        image: jakousa/k8stestjami
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+           memory: "128Mi"
+           cpu: "250m"

@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  root:
+    build:
+      context: ./root
+      dockerfile: config/dev.Dockerfile
+    image: toskadev_root_dev
+    container_name: toskadev_root_dev
+    volumes:
+      - ./root:/usr/src/app
+    ports:
+      - 3000:3000
+  jami-svc:
+    build:
+      context: ./jami
+      dockerfile: config/dev.Dockerfile
+    image: toskadev_jami_dev
+    container_name: toskadev_jami_dev
+    volumes:
+      - ./jami:/usr/src/app
+    ports:
+      - 3001:3001
