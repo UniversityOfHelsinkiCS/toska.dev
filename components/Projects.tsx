@@ -15,14 +15,14 @@ export const Projects = () => {
           <Link color={theme.toskaYellow}>Lue lisää</Link>
         </Box>
       </Flex>
-      <Flex justifyContent="space-evenly" my="2rem">
-        <Image src={screenshotMock} borderRadius="5px" w="12rem" />
+      <Flex justifyContent="space-evenly" my={24}>
         <Box maxW="50%">
           <b>Oodikone</b> on Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Morbi rutrum ultrices nisi, nec laoreet sapien porttitor ut.
           Etiam rutrum bibendum lorem, eget lobortis mauris viverra et.{" "}
           <Link color={theme.toskaYellow}>Lue lisää</Link>
         </Box>
+        <Image src={screenshotMock} borderRadius="5px" w="12rem" />
       </Flex>
       <Flex justifyContent="space-evenly">
         <Image src={screenshotMock} borderRadius="5px" w="12rem" />

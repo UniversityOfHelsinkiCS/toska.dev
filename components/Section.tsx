@@ -18,7 +18,7 @@ const Section: React.FC<SectionProps & BoxProps> = ({
         bg === "BLACK" ? theme.backgroundBlack : theme.backgroundWhite
       }
       color={bg === "BLACK" ? theme.backgroundWhite : theme.backgroundBlack}
-      py="2rem"
+      py={20}
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
@@ -26,7 +26,12 @@ const Section: React.FC<SectionProps & BoxProps> = ({
     >
       <Container centerContent>
         {header && (
-          <Heading textTransform="uppercase" mb="2rem">
+          <Heading
+            textTransform="uppercase"
+            mb={16}
+            borderTop="5px solid"
+            borderColor={bg === "BLACK" ? theme.toskaYellow : theme.toskaRed}
+          >
             {header}
           </Heading>
         )}

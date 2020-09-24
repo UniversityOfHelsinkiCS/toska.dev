@@ -1,4 +1,4 @@
-import { Avatar, Box, Wrap } from "@chakra-ui/core";
+import { Avatar, Badge, Box, Wrap } from "@chakra-ui/core";
 import React from "react";
 import { theme } from "utils/theme";
 
@@ -399,9 +399,12 @@ export const Members = () => {
     <Wrap>
       #01
       {mockMembersList.map((member, index) => (
-        <Box p={1} textAlign="center">
+        <Box key={member.id} p={1} textAlign="center">
           <Avatar name="Dan Abrahmov" src={member.avatar_url} />
           <Box mt="0.2rem">Kalle</Box>
+          <Badge bg={theme.toskaRed} color={theme.backgroundWhite}>
+            ALUMNI
+          </Badge>
           <Box color={theme.textGrey}>
             #{index < 9 && "0"}
             {index + 1}

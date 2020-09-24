@@ -16,6 +16,14 @@ const IndexPage = () => (
         Helsingin yliopiston tietojenkäsittelytieteen osaston
         sovelluskehitysakatemia
       </Box>
+      <Box mt={12}>
+        <b>TOSKA</b> on Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Morbi rutrum ultrices nisi, nec laoreet sapien porttitor ut. Etiam
+        rutrum bibendum lorem, eget lobortis mauris viverra et.Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Morbi rutrum ultrices nisi, nec
+        laoreet sapien porttitor ut. Etiam rutrum bibendum lorem, eget lobortis
+        mauris viverra et.
+      </Box>
     </Section>
     <Section bg="BLACK" header="Projektit">
       <Projects />
@@ -27,8 +35,12 @@ const IndexPage = () => (
       <>
         <Image src={toskaMopo} loading="lazy" w="4rem" mb="1rem" />
         <Flex color={theme.toskaYellow} fontSize="4rem">
-          <Box as={FaGithub} m="1rem" />
-          <Box as={MdEmail} m="1rem" />
+          <a href="https://github.com/UniversityOfHelsinkiCS">
+            <Box as={FaGithub} m="1rem" />
+          </a>
+          <a href="mailto:grp-toska@helsinki.fi">
+            <Box as={MdEmail} m="1rem" />
+          </a>
         </Flex>
       </>
     </Section>
