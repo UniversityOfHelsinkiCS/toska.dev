@@ -17,12 +17,15 @@ const IndexPage = () => (
         sovelluskehitysakatemia
       </Box>
       <Box mt={12}>
-        <b>TOSKA</b> on Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Morbi rutrum ultrices nisi, nec laoreet sapien porttitor ut. Etiam
-        rutrum bibendum lorem, eget lobortis mauris viverra et.Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit. Morbi rutrum ultrices nisi, nec
-        laoreet sapien porttitor ut. Etiam rutrum bibendum lorem, eget lobortis
-        mauris viverra et.
+        <Box as="b" borderBottom="4px solid" borderColor={theme.toskaRed}>
+          TOSKA
+        </Box>{" "}
+        on Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
+        ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
+        lorem, eget lobortis mauris viverra et.Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Morbi rutrum ultrices nisi, nec laoreet
+        sapien porttitor ut. Etiam rutrum bibendum lorem, eget lobortis mauris
+        viverra et.
       </Box>
     </Section>
     <Section bg="BLACK" header="Projektit">
