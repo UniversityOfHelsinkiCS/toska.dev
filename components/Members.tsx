@@ -396,10 +396,10 @@ const mockMembersList = [
 
 export const Members = () => {
   return (
-    <Wrap>
+    <Wrap justify="center" spacing={8}>
       #01
       {mockMembersList.map((member, index) => (
-        <Box key={member.id} p={4} textAlign="center">
+        <Box key={member.id} textAlign="center">
           <Avatar name="Dan Abrahmov" src={member.avatar_url} />
           <Box fontWeight="bold" mt="0.2rem">
             Etunimi
