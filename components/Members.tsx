@@ -399,16 +399,20 @@ export const Members = () => {
     <Wrap>
       #01
       {mockMembersList.map((member, index) => (
-        <Box key={member.id} p={1} textAlign="center">
+        <Box key={member.id} p={4} textAlign="center">
           <Avatar name="Dan Abrahmov" src={member.avatar_url} />
-          <Box mt="0.2rem">Kalle</Box>
-          <Badge bg={theme.toskaRed} color={theme.backgroundWhite}>
-            ALUMNI
-          </Badge>
-          <Box color={theme.textGrey}>
+          <Box fontWeight="bold" mt="0.2rem">
+            Etunimi
+          </Box>
+          <Badge bg={theme.backgroundBlack} color={theme.toskaYellow}>
             #{index < 9 && "0"}
             {index + 1}
-          </Box>
+          </Badge>
+          {
+            <Box mt="0.4rem" color={theme.toskaRed}>
+              2016 - 2017
+            </Box>
+          }
         </Box>
       ))}
     </Wrap>
