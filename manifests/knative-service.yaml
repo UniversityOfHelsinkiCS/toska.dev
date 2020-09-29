@@ -8,4 +8,4 @@ spec:
   template:
     spec:
       containers:
-        - image: toska/toska-dev:latest
+        - image: toska/toska-dev

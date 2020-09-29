@@ -38,5 +38,4 @@ jobs:
         with:
           manifests: |
             manifests/knative-service.yaml
-          images: |
-            toska/toska-dev:${{ github.sha }}
+          images: 'toska/toska-dev:${{ github.sha }}'
