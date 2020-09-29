@@ -27,3 +27,5 @@ out
 Dockerfile
 .dockerignore
 .github
+manifests
+README.md
