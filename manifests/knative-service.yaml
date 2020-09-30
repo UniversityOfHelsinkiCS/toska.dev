@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: toska-dev
   annotations:
-    custom-hostname: toska # toska.dev
+    custom-hostname: staging.toska # staging.toska.dev
 spec:
   template:
     spec:
