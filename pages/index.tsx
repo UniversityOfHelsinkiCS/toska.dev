@@ -4,6 +4,7 @@ import toskaMopo from "assets/toskaMopo.png";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import Section from "components/Section";
+import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -13,10 +14,12 @@ import { theme } from "utils/theme";
 export const getStaticProps = async () => {
   const introText = await import("content/intro.md");
 
-  return { props: { introText: introText.default } };
+  return { props: { introText: introText.default as string } };
 };
 
-const IndexPage = ({ introText }: { introText: string }) => (
+const IndexPage = ({
+  introText,
+}: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
       <title>TOSKA</title>

@@ -1,19 +1,55 @@
-import { Box, Flex, Heading, Link } from "@chakra-ui/core";
+import { Box, Flex, Heading, Image } from "@chakra-ui/core";
+import toskaLogo from "assets/toskaLogo.svg";
 import Section from "components/Section";
+import fs from "fs";
+import matter from "gray-matter";
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import Link from "next/link";
+import { join } from "path";
 import { FaGithub } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
 
-const ProjectPage = () => (
+export const getStaticPaths: GetStaticPaths = async () => {
+  const projects = fs
+    .readdirSync(join(process.cwd(), "content", "projects"))
+    .filter((file) => file.includes(".md"))
+    .map((file) => file.replace(".md", ""));
+
+  const paths = projects.map((name) => ({ params: { name } }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const content = await import(`content/projects/${params.name}.md`);
+  const parsed = matter(content.default);
+
+  console.log({ parsed });
+
+  return { props: { content: parsed.content, ...parsed.data } };
+};
+
+const ProjectPage = ({
+  content,
+  github,
+  title,
+  date,
+}: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
-    <Section h="0rem" bg="WHITE">
-      Back
+    <Section bg="WHITE" p={4}>
+      <Link href="/">
+        <a>
+          <Image src={toskaLogo} w="6rem" />
+        </a>
+      </Link>
     </Section>
     <Section h="100vh" bg="BLACK">
       <Box m={4}>
-        <Heading>Oodikone</Heading>
+        <Heading>{title}</Heading>
         <Link
           color={theme.toskaRed}
-          href="https://github.com/UniversityOfHelsinkiCS/oodikone"
+          href={`https://github.com/UniversityOfHelsinkiCS/${github}`}
         >
           <Flex alignItems="center">
             <Box mr={1}>
@@ -23,22 +59,9 @@ const ProjectPage = () => (
           </Flex>
         </Link>
         <Box color={theme.textGrey} mb={4}>
-          Maaliskuu 2016 -
+          {date}
         </Box>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
-        ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
-        lorem, eget lobortis mauris viverra et.Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. <br />
-        <br />
-        Morbi rutrum ultrices nisi, nec laoreet sapien porttitor ut. Etiam
-        rutrum bibendum lorem, eget lobortis mauris viverra et.Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit. Morbi rutrum ultrices nisi, nec
-        laoreet sapien porttitor ut.
-        <br />
-        <br /> Etiam rutrum bibendum lorem, eget lobortis mauris viverra
-        et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
-        ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
-        lorem, eget lobortis mauris viverra et.
+        <ReactMarkdown source={content} />
       </Box>
     </Section>
   </>
