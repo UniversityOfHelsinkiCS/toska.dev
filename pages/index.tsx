@@ -1,14 +1,20 @@
 import { Box, Flex, Grid, Image, Link } from "@chakra-ui/core";
+import toskaLogo from "assets/toskaLogo.svg";
+import toskaMopo from "assets/toskaMopo.png";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import Section from "components/Section";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { theme } from "utils/theme";
-import toskaLogo from "../assets/toskaLogo.svg";
-import toskaMopo from "../assets/toskaMopo.png";
 
-const IndexPage = () => (
+export const getStaticProps = async () => {
+  const introText = await import("content/intro.md");
+
+  return { props: { introText: introText.default } };
+};
+
+const IndexPage = ({ introText }: { introText: string }) => (
   <>
     <Section bg="WHITE">
       <Grid templateColumns="1fr 5fr 1fr">
@@ -27,14 +33,7 @@ const IndexPage = () => (
         Helsingin yliopiston tietojenkäsittelytieteen osaston
         sovelluskehitysakatemia
       </Box>
-      <Box mt={12}>
-        <Box as="b">TOSKA</Box> on Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Morbi rutrum ultrices nisi, nec laoreet sapien
-        porttitor ut. Etiam rutrum bibendum lorem, eget lobortis mauris viverra
-        et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
-        ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
-        lorem, eget lobortis mauris viverra et.
-      </Box>
+      <Box mt={12}>{introText}</Box>
     </Section>
     <Section bg="BLACK" header="Projektit">
       <Projects />
