@@ -8,10 +8,11 @@ Text on top below the logo and "Helsingin yliopiston tietojenkäsittelytieteen o
 
 ## members.json
 
-| Property   | Type                           | Description                                                                                                                                                                                                                                                                       |
-| ---------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name       | string                         | First name of the members.                                                                                                                                                                                                                                                        |
-| githubName | string                         | GitHub user of the member. Also used for fetching the avatar.                                                                                                                                                                                                                     |
-| joinedDate | {month: number, year: number}  | Month and year of when the member joined.                                                                                                                                                                                                                                         |
-| alumnDate  | {month: number, year: number}? | Month and year of when the member became an alumn if applicable.                                                                                                                                                                                                                  |
-| tieBreaker | number?                        | If two members have the same `joinedDate` one with the lower tieBreaker will get the lower member number. If no tieBreaker is set it defaults to 999. If two members have the same `joinedDate` and the same `tieBreaker` then alphabetical order of the first name will be used. |
+_Note the order in the array is meaningful_
+
+| Property   | Type                           | Description                                                      |
+| ---------- | ------------------------------ | ---------------------------------------------------------------- |
+| name       | string                         | First name of the members.                                       |
+| githubName | string                         | GitHub user of the member. Also used for fetching the avatar.    |
+| joinedDate | {month: number, year: number}  | Month and year of when the member joined.                        |
+| alumnDate  | {month: number, year: number}? | Month and year of when the member became an alumn if applicable. |

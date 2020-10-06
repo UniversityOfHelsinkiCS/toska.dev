@@ -1,10 +1,22 @@
 [
   {
+    "name": "Example",
+    "githubName": "example",
+    "joinedDate": {
+      "month": 5,
+      "year": 19
+    },
+    "alumnDate": {
+      "month": 6,
+      "year": 20
+    }
+  },
+  {
     "name": "Kalle",
     "githubName": "Sendouc",
     "joinedDate": {
       "month": 2,
-      "year": 2020
+      "year": 20
     }
   }
 ]
