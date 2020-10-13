@@ -6,4 +6,4 @@ images:
 - name: IMAGE_FROM_KUSTOMIZATION
   newName: toska/toska-dev
 commonAnnotations:
-  custom-hostname: staging.toska
+  custom-hostname: toska
