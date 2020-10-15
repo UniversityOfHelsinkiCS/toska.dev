@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: toska-dev
+  annotations:
+    custom-hostname: toska # staging.toska.dev
+spec:
+  template:
+    spec:
+      containers:
+        - image: IMAGE_FROM_KUSTOMIZATION
