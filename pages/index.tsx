@@ -38,8 +38,6 @@ export const getStaticProps = async () => {
       })
   );
 
-  console.log({ projects });
-
   return { props: { introText: introText.default as string, projects } };
 };
 

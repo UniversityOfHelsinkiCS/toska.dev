@@ -1,7 +1,6 @@
 import { Box, Flex, Heading, Image, Link } from "@chakra-ui/core";
 import NextLink from "next/link";
 import { theme } from "utils/theme";
-import screenshotMock from "../assets/screenshotMock.png";
 import Markdown from "./Markdown";
 
 export const Projects = ({
@@ -41,7 +40,7 @@ export const Projects = ({
           {i % 2 !== 0 && (
             <Image
               objectFit="cover"
-              src={screenshotMock}
+              src={`/projects/${project.name}.png`}
               borderRadius="5px"
               w="12rem"
             />
