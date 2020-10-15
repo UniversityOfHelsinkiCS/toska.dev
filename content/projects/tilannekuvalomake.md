@@ -4,17 +4,8 @@ title: Tilannekuvalomake
 date: Helmikuu 2020 -
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
-ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
-lorem, eget lobortis mauris viverra et.Lorem ipsum dolor sit amet,
-consectetur adipiscing elit.
+Opetushallinnon tilannekuvalomake. Projektin alussa tiedossa oli vain niukasti mitä uusia ominaisuuksia vanhaan lomakkeeseen verrattuna tultaisiin tarvitsemaan. Oikeastaan sovelluksen edetessä lomakkeesta kasvoi täysin uudenlainen palvelu.
 
-Morbi rutrum ultrices nisi, nec laoreet sapien porttitor ut. Etiam
-rutrum bibendum lorem, eget lobortis mauris viverra et.Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. Morbi rutrum ultrices nisi, nec
-laoreet sapien porttitor ut.
+Lomakkeessa on WebSocketilla toteutettu ominaisuus, jossa usea käyttäjä voi täyttää sitä samanaikaisesti. Ideana on että lomaketta ei oikeastaan koskaan lähetetä vaan sitä voi halutessaan työstää pikkuhiljaa.
 
-Etiam rutrum bibendum lorem, eget lobortis mauris viverra
-et.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum
-ultrices nisi, nec laoreet sapien porttitor ut. Etiam rutrum bibendum
-lorem, eget lobortis mauris viverra et.
+Vanhassa lomakkeessa kaikki datan analysointi piti tehdä erikseen esimerkiksi Excelissä. Uudessa versiossa hyvät analysointiominaisuudet olivat keskiössä. Tavoitteena onkin, että palvelussa saa heti hyvän yleiskuvan ohjelmien tilanteesta sekä kehityksen suunnasta. Toki jos datan analysointia halutaan tehdä erikseen tarjoaa lomake myös vastausten PDF- tai CSV-muodossa lataamisen.

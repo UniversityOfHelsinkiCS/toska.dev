@@ -1,13 +1,14 @@
-import { Box, Flex, Heading, Image } from "@chakra-ui/core";
+import { Box, Flex, Heading, Image, Link as ChakraLink } from "@chakra-ui/core";
 import toskaLogo from "assets/toskaLogo.svg";
+import Markdown from "components/Markdown";
 import Section from "components/Section";
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
-import Link from "next/link";
+import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import NextLink from "next/link";
 import { join } from "path";
 import { FaGithub } from "react-icons/fa";
-import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -21,33 +22,55 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+interface Props {
+  github: string;
+  title: string;
+  date: string;
+  content: string;
+  projectName: string;
+}
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  if (!params || typeof params.name !== "string") {
+    // shouldn't happen..? not sure why this is needed
+    throw Error("No params provided");
+  }
+
   const content = await import(`content/projects/${params.name}.md`);
   const parsed = matter(content.default);
 
-  console.log({ parsed });
+  if (!parsed.data.github || !parsed.data.title || !parsed.data.date) {
+    throw Error("Markdown file doesn't have correct gray matter");
+  }
 
-  return { props: { content: parsed.content, ...parsed.data } };
+  return {
+    props: {
+      github: parsed.data.github as string,
+      title: parsed.data.title as string,
+      date: parsed.data.date as string,
+      content: parsed.content,
+      projectName: params.name,
+    },
+  };
 };
 
-const ProjectPage = ({
-  content,
-  github,
-  title,
-  date,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
+const ProjectPage = ({ content, github, title, date, projectName }: Props) => (
   <>
+    <Head>
+      <title>{`${title} - Projektit - TOSKA`}</title>
+    </Head>
     <Section bg="WHITE" p={4}>
-      <Link href="/">
+      <NextLink href="/">
         <a>
           <Image src={toskaLogo} w="6rem" />
         </a>
-      </Link>
+      </NextLink>
     </Section>
     <Section h="100vh" bg="BLACK">
+      <Image src={`/projects/${projectName}.png`} borderRadius="5px" />
       <Box m={4}>
         <Heading>{title}</Heading>
-        <Link
+        <ChakraLink
           color={theme.toskaRed}
           href={`https://github.com/UniversityOfHelsinkiCS/${github}`}
         >
@@ -57,11 +80,11 @@ const ProjectPage = ({
             </Box>
             Github
           </Flex>
-        </Link>
+        </ChakraLink>
         <Box color={theme.textGrey} mb={4}>
           {date}
         </Box>
-        <ReactMarkdown source={content} />
+        <Markdown value={content} />
       </Box>
     </Section>
   </>

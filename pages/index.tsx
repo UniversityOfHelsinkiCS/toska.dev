@@ -4,8 +4,11 @@ import toskaMopo from "assets/toskaMopo.png";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import Section from "components/Section";
+import fs from "fs";
+import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import { join } from "path";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ReactMarkdown from "react-markdown";
@@ -14,18 +17,42 @@ import { theme } from "utils/theme";
 export const getStaticProps = async () => {
   const introText = await import("content/intro.md");
 
-  return { props: { introText: introText.default as string } };
+  const projects = await Promise.all(
+    fs
+      .readdirSync(join(process.cwd(), "content", "projects"))
+      .filter((file) => file.includes(".md"))
+      .map((file) => file.replace(".md", ""))
+      .map(async (p) => {
+        const content = await import(`content/projects/${p}.md`);
+        const parsed = matter(content.default);
+
+        if (!parsed.data.github || !parsed.data.title || !parsed.data.date) {
+          throw Error("Markdown file doesn't have correct gray matter");
+        }
+
+        return {
+          title: parsed.data.title as string,
+          content: parsed.content,
+          name: p,
+        };
+      })
+  );
+
+  console.log({ projects });
+
+  return { props: { introText: introText.default as string, projects } };
 };
 
 const IndexPage = ({
   introText,
+  projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
       <title>TOSKA</title>
     </Head>
     <Section bg="WHITE">
-      <img src={toskaLogo} style={{ width: "24rem" }} />
+      <Image src={toskaLogo} width="24rem" />
       <Box textAlign="center" letterSpacing={1} color={theme.textGrey}>
         Helsingin yliopiston tietojenkäsittelytieteen osaston
         sovelluskehitysakatemia
@@ -35,7 +62,7 @@ const IndexPage = ({
       </Box>
     </Section>
     <Section bg="BLACK" header="Projektit">
-      <Projects />
+      <Projects projects={projects} />
     </Section>
     <Section bg="WHITE" header="Jäsenet">
       <Members />
