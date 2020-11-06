@@ -15,7 +15,7 @@ import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
 
 export const getStaticProps = async () => {
-  const introText = await import("../content/intro.md");
+  const introText =  await require("../content/intro.md");
 
   const projects = await Promise.all(
     fs
