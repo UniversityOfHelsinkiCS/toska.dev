@@ -18,5 +18,17 @@
       "month": 2,
       "year": 20
     }
+  },
+  {
+    "name": "Sasu",
+    "githubName": "sasuamaki",
+    "joinedDate": {
+      "month": 5,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 7,
+      "year": 19
+    }
   }
 ]
