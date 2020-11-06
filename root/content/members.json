@@ -145,7 +145,11 @@
   },
   {
     "name": "Basse",
-    "githubName": "joonashak"
+    "githubName": "joonashak",
+    "joinedDate": {
+      "month": 5,
+      "year": 20
+    }
   },
   {
     "name": "Saara",
