@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/deploy-doom'
       - 'doom/**'
+  workflow_dispatch:
+
 
 defaults:
   run:
