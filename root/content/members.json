@@ -109,7 +109,15 @@
   },
   {
     "name": "Jere",
-    "githubName": "xneme"
+    "githubName": "xneme",
+    "joinedDate": {
+      "month": 5,
+      "year": 19
+    },
+    "alumnDate": {
+      "month": 12,
+      "year": 20
+    }
   },
   {
     "name": "Tero",
