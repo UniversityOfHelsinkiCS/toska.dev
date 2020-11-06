@@ -1,5 +1,17 @@
 [
   {
+    "name": "mluukkai",
+    "githubName": "mluukkai",
+    "joinedDate": {
+      "month": 1,
+      "year": 1970
+    },
+    "alumnDate": {
+      "month": 12,
+      "year": 2112
+    }
+  },
+  {
     "name": "Jami",
     "githubName": "jakousa",
     "joinedDate": {
@@ -11,7 +23,42 @@
       "year": 18
     }
   },
-  
+  {
+    "name": "Tuomo",
+    "githubName": "totutotu",
+    "joinedDate": {
+      "month": 9,
+      "year": 17
+    },
+    "alumnDate": {
+      "month": 9,
+      "year": 19
+    }
+  },
+  {
+    "name": "Mikko",
+    "githubName": "mahtis",
+    "joinedDate": {
+      "month": 12,
+      "year": 17
+    },
+    "alumnDate": {
+      "month": 12,
+      "year": 18
+    }
+  },
+  {
+    "name": "Terho",
+    "githubName": "ttuotila",
+    "joinedDate": {
+      "month": 3,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 3,
+      "year": 19
+    }
+  },
   {
     "name": "Sasu",
     "githubName": "sasumaki",
@@ -25,11 +72,96 @@
     }
   },
   {
+    "name": "Ilkka",
+    "githubName": "ikuisma",
+    "joinedDate": {
+      "month": 5,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 5,
+      "year": 19
+    }
+  },
+  {
+    "name": "Rimi",
+    "githubName": "Rochet2",
+    "joinedDate": {
+      "month": 9,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 9,
+      "year": 19
+    }
+  },
+  {
+    "name": "Esa",
+    "githubName": "esakemp",
+    "joinedDate": {
+      "month": 12,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 6,
+      "year": 20
+    }
+  },
+  {
+    "name": "Jere",
+    "githubName": "xneme"
+  },
+  {
+    "name": "Tero",
+    "githubName": "granigan"
+  },
+  {
+    "name": "Olli",
+    "githubName": "woltsu"
+  },
+  {
+    "name": "Joona",
+    "githubName": "cxcorp"
+  },
+  {
+    "name": "Marko",
+    "githubName": "markokoskinen2037"
+  },
+  {
+    "name": "Atte",
+    "githubName": "ajhaa"
+  },
+  {
+    "name": "Gert",
+    "githubName": "darake"
+  },
+  {
     "name": "Kalle",
     "githubName": "Sendouc",
     "joinedDate": {
       "month": 2,
       "year": 20
     }
+  },
+  {
+    "name": "Basse",
+    "githubName": "joonashak"
+  },
+  {
+    "name": "Saara",
+    "githubName": "saarasat",
+    "joinedDate": {
+      "month": 9,
+      "year": 20
+    }
+  },
+  {
+    "name": "Roni",
+    "githubName": "vaahtokarkki",
+    "joinedDate": {
+      "month": 9,
+      "year": 20
+    }
   }
+  
 ]

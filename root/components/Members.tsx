@@ -4,13 +4,13 @@ import React from "react";
 import { theme } from "utils/theme";
 
 const getDateString = (
-  joinedDate: { month: number; year: number },
+  joinedDate?: { month: number; year: number },
   alumnDate?: { month: number; year: number }
 ) => {
-  if (alumnDate) {
-    return `${joinedDate.month}/${joinedDate.year} - ${alumnDate.month}/${alumnDate.year}`;
-  }
-  return `${joinedDate.month}/${joinedDate.year}`;
+  if (!joinedDate) return ''
+  if (!alumnDate) return `${joinedDate.month}.${joinedDate.year}`;
+
+  return `${joinedDate.month}.${joinedDate.year} - ${alumnDate.month}.${alumnDate.year}`
 };
 
 export const Members = () => {
@@ -30,7 +30,7 @@ export const Members = () => {
           </Box>
           <Badge bg={theme.backgroundBlack} color={theme.toskaYellow}>
             #{index < 9 && "0"}
-            {index + 1}
+            {index}
           </Badge>
           {
             <Box mt="0.4rem" color={theme.toskaRed}>
