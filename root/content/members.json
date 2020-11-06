@@ -1,14 +1,27 @@
 [
   {
-    "name": "Example",
-    "githubName": "example",
+    "name": "Jami",
+    "githubName": "jakousa",
     "joinedDate": {
-      "month": 5,
-      "year": 19
+      "month": 6,
+      "year": 17
     },
     "alumnDate": {
-      "month": 6,
-      "year": 20
+      "month": 5,
+      "year": 18
+    }
+  },
+  
+  {
+    "name": "Sasu",
+    "githubName": "sasumaki",
+    "joinedDate": {
+      "month": 5,
+      "year": 18
+    },
+    "alumnDate": {
+      "month": 7,
+      "year": 19
     }
   },
   {
@@ -17,18 +30,6 @@
     "joinedDate": {
       "month": 2,
       "year": 20
-    }
-  },
-  {
-    "name": "Sasu",
-    "githubName": "sasuamaki",
-    "joinedDate": {
-      "month": 5,
-      "year": 18
-    },
-    "alumnDate": {
-      "month": 7,
-      "year": 19
     }
   }
 ]
