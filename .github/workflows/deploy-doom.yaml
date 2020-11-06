@@ -1,8 +1,9 @@
-name: Deploy toska.dev
+name: Deploy doom
 
 on:
   push:
     paths:
+      - '.github/workflows/deploy-doom'
       - 'doom/**'
 
 defaults:

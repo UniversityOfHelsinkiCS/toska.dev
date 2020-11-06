@@ -3,6 +3,7 @@ name: Deploy toska.dev
 on:
   push:
     paths:
+      - '.github/workflows/deploy-root'
       - 'root/**'
 
 defaults:
