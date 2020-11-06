@@ -141,7 +141,11 @@
   },
   {
     "name": "Gert",
-    "githubName": "darake"
+    "githubName": "darake",
+    "joinedDate": {
+      "month": 2,
+      "year": 20
+    }
   },
   {
     "name": "Kalle",
