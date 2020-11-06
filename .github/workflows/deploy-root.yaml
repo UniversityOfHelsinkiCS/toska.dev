@@ -37,6 +37,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          context: ./root
           file: ./root/Dockerfile
           tags: toska/toska-dev:${{ github.sha }}
 
