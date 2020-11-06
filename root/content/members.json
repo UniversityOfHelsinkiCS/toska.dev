@@ -133,7 +133,11 @@
   },
   {
     "name": "Marko",
-    "githubName": "markokoskinen2037"
+    "githubName": "markokoskinen2037",
+    "joinedDate": {
+      "month": 11,
+      "year": 19
+    }
   },
   {
     "name": "Atte",
