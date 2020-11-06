@@ -9,7 +9,7 @@ import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { join } from "path";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGamepad } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
@@ -74,6 +74,9 @@ const IndexPage = ({
           </a>
           <a href="mailto:grp-toska@helsinki.fi">
             <Box as={MdEmail} m="1rem" />
+          </a>
+          <a href="https://doom.toska.dev">
+            <Box as={FaGamepad} m="1rem" />
           </a>
         </Flex>
       </>
