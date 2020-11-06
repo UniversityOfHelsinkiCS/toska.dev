@@ -3,11 +3,11 @@ name: Deploy toska.dev
 on:
   push:
     paths:
-      - 'root/**'
+      - 'doom/**'
 
 defaults:
   run:
-    working-directory: root
+    working-directory: doom
 
 jobs:
   setup-build-publish-deploy:
