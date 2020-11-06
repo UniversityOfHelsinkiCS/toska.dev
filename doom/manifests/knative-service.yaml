@@ -9,3 +9,4 @@ spec:
     spec:
       containers:
         - image: mattipaksula/ws-doom
+      containerConcurrency: 1
