@@ -9,13 +9,13 @@ import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { join } from "path";
-import { FaGithub, FaGamepad } from "react-icons/fa";
+import { FaGamepad, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
 
 export const getStaticProps = async () => {
-  const introText =  await require("../content/intro.md");
+  const introText = await require("../content/intro.md");
 
   const projects = await Promise.all(
     fs
@@ -62,7 +62,7 @@ const IndexPage = ({
     <Section bg="BLACK" header="Projektit">
       <Projects projects={projects} />
     </Section>
-    <Section bg="WHITE" header="Jäsenet">
+    <Section bg="WHITE" header="Jäsenet" wide>
       <Members />
     </Section>
     <Section bg="BLACK">

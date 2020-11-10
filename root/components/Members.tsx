@@ -1,4 +1,4 @@
-import { Avatar, Badge, Box, Wrap } from "@chakra-ui/core";
+import { Badge, Box, Flex, Image, Wrap, WrapItem } from "@chakra-ui/core";
 import members from "content/members.json";
 import React from "react";
 import { theme } from "utils/theme";
@@ -7,37 +7,65 @@ const getDateString = (
   joinedDate?: { month: number; year: number },
   alumnDate?: { month: number; year: number }
 ) => {
-  if (!joinedDate) return ''
+  if (!joinedDate) return "";
   if (!alumnDate) return `${joinedDate.month}.${joinedDate.year}`;
 
-  return `${joinedDate.month}.${joinedDate.year} - ${alumnDate.month}.${alumnDate.year}`
+  return `${joinedDate.month}.${joinedDate.year} - ${alumnDate.month}.${alumnDate.year}`;
 };
 
 export const Members = () => {
   return (
     <Wrap justify="center" spacing={8}>
-      #01
       {members.map((member, index) => (
-        <Box key={member.githubName} textAlign="center">
-          <a href={`https://github.com/${member.githubName}`}>
-            <Avatar
-              name={member.name}
-              src={`https://github.com/${member.githubName}.png?size=80`}
-            />
-          </a>
-          <Box fontWeight="bold" mt="0.2rem">
-            {member.name}
+        <WrapItem
+          as="div"
+          display="flex"
+          flexDir="column"
+          key={member.githubName}
+        >
+          <Box>
+            <a href={`https://github.com/${member.githubName}`}>
+              <Image
+                src={`https://github.com/${member.githubName}.png?size=200`}
+                width={48}
+                height={48}
+                loading="lazy"
+              />
+            </a>
           </Box>
-          <Badge bg={theme.backgroundBlack} color={theme.toskaYellow}>
-            #{index < 9 && "0"}
-            {index}
-          </Badge>
-          {
-            <Box mt="0.4rem" color={theme.toskaRed}>
+          <Box
+            color={theme.backgroundWhite}
+            bg={theme.backgroundBlack}
+            w="100%"
+            px={3}
+            pb={4}
+            pt={2}
+          >
+            <Flex alignItems="center" justifyContent="space-between">
+              <Box fontWeight="bold" fontSize="1.4rem">
+                {member.name}
+              </Box>
+              <Badge
+                bg={theme.backgroundBlack}
+                color={theme.toskaYellow}
+                fontSize="0.9rem"
+              >
+                #{index < 9 && "0"}
+                {index}
+              </Badge>
+            </Flex>
+
+            <Box
+              mt="0.4rem"
+              fontSize="0.75rem"
+              height="0.75rem"
+              fontWeight="bold"
+              color={theme.toskaRed}
+            >
               {getDateString(member.joinedDate, member.alumnDate)}
             </Box>
-          }
-        </Box>
+          </Box>
+        </WrapItem>
       ))}
     </Wrap>
   );

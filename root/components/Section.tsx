@@ -5,11 +5,13 @@ import { theme } from "../utils/theme";
 interface SectionProps {
   bg: "BLACK" | "WHITE";
   header?: string;
+  wide?: boolean;
 }
 
 const Section: React.FC<SectionProps & BoxProps> = ({
   bg,
   header,
+  wide = false,
   ...props
 }) => {
   return (
@@ -24,11 +26,12 @@ const Section: React.FC<SectionProps & BoxProps> = ({
       flexDirection="column"
       {...props}
     >
-      <Container centerContent>
+      <Container centerContent maxWidth={wide ? "120ch" : undefined}>
         {header && (
           <Heading
             textTransform="uppercase"
             mb={16}
+            pt={1}
             borderTop="5px solid"
             borderColor={bg === "BLACK" ? theme.toskaYellow : theme.toskaRed}
           >
