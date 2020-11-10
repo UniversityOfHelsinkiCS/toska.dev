@@ -32,7 +32,6 @@ interface Props {
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   if (!params || typeof params.name !== "string") {
-    // shouldn't happen..? not sure why this is needed
     throw Error("No params provided");
   }
 
@@ -67,9 +66,15 @@ const ProjectPage = ({ content, github, title, date, projectName }: Props) => (
       </NextLink>
     </Section>
     <Section h="100vh" bg="BLACK">
-      <Image src={`/projects/${projectName}.png`} borderRadius="5px" />
       <Box m={4}>
-        <Heading>{title}</Heading>
+        <Image
+          src={`/projects/${projectName}.png`}
+          width={500}
+          height={500}
+          objectFit="cover"
+          mx="auto"
+        />
+        <Heading mt={6}>{title}</Heading>
         <ChakraLink
           color={theme.toskaRed}
           href={`https://github.com/UniversityOfHelsinkiCS/${github}`}
