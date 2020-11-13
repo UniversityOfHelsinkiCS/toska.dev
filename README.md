@@ -25,12 +25,16 @@ Content from the site comes from the files in the `root/content` folder. `.md` f
 github: lomake
 title: Tilannekuvalomake
 date: Helmikuu 2020 -
+tags: Deprekoitu,Testi
+key: 999
 ---
 ```
 
 github: project name on GitHub  
 title: project's name  
 date: Project starting month - Project ending month (if any) e.g. Helmikuu 2020 - Kesäkuu 2021
+tags: (optional) Tags related to the project. If multiple separate with ,
+key: (optional - defaults to 0) Decides the order on the front page. Smaller number comes first. If tied uses alphabetical order.
 
 3. Add the actual content describing the project
 
