@@ -1,4 +1,11 @@
-import { Box, Flex, Heading, Image, Link as ChakraLink } from "@chakra-ui/core";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link as ChakraLink,
+} from "@chakra-ui/core";
 import toskaLogo from "assets/toskaLogo.svg";
 import Markdown from "components/Markdown";
 import Section from "components/Section";
@@ -28,6 +35,7 @@ interface Props {
   date: string;
   content: string;
   projectName: string;
+  tags: string;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
@@ -46,6 +54,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     props: {
       github: parsed.data.github as string,
       title: parsed.data.title as string,
+      tags: parsed.data.tags,
       date: parsed.data.date as string,
       content: parsed.content,
       projectName: params.name,
@@ -53,7 +62,14 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   };
 };
 
-const ProjectPage = ({ content, github, title, date, projectName }: Props) => (
+const ProjectPage = ({
+  content,
+  github,
+  title,
+  date,
+  projectName,
+  tags,
+}: Props) => (
   <>
     <Head>
       <title>{`${title} - Projektit - TOSKA`}</title>
@@ -73,6 +89,15 @@ const ProjectPage = ({ content, github, title, date, projectName }: Props) => (
           mx="auto"
         />
         <Heading mt={6}>{title}</Heading>
+        {tags && (
+          <Box mt={1} mb={2}>
+            {tags.split(",").map((tag) => (
+              <Badge color={theme.toskaYellow} mr={2} key={tag}>
+                {tag}
+              </Badge>
+            ))}
+          </Box>
+        )}
         <ChakraLink
           color={theme.toskaRed}
           href={`https://github.com/UniversityOfHelsinkiCS/${github}`}

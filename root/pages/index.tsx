@@ -26,12 +26,18 @@ export const getStaticProps = async () => {
         const content = await import(`content/projects/${p}.md`);
         const parsed = matter(content.default);
 
-        if (!parsed.data.github || !parsed.data.title || !parsed.data.date) {
+        if (!parsed.data.github || !parsed.data.title) {
           throw Error("Markdown file doesn't have correct gray matter");
+        }
+
+        if (parsed.data.key && isNaN(Number(parsed.data.key))) {
+          throw Error("Key provided has to be a number");
         }
 
         return {
           title: parsed.data.title as string,
+          tags: parsed.data.tags ? (parsed.data.tags as string) : null,
+          key: parsed.data.key ? Number(parsed.data.key) : null,
           content: parsed.content,
           name: p,
         };

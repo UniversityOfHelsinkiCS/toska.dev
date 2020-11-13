@@ -45,7 +45,7 @@ export const Members = () => {
               <Box fontWeight="bold" fontSize="1.4rem">
                 {member.name}
               </Box>
-              <Badge bg={theme.backgroundBlack} color={theme.backgroundWhite}>
+              <Badge color={theme.toskaYellow}>
                 #{index < 10 && "0"}
                 {index}
               </Badge>
