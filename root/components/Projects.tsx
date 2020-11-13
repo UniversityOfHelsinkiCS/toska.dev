@@ -20,6 +20,7 @@ export const Projects = ({
           <Flex key={project.name} justifyContent="space-evenly" my={12}>
             {isEven && (
               <Image
+                objectFit="cover"
                 src={`/projects/${project.name}.png`}
                 width="12rem"
                 height="12rem"

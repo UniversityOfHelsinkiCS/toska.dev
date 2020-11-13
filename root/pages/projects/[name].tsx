@@ -65,12 +65,10 @@ const ProjectPage = ({ content, github, title, date, projectName }: Props) => (
         </a>
       </NextLink>
     </Section>
-    <Section h="100vh" bg="BLACK">
+    <Section bg="BLACK" py={2}>
       <Box m={4}>
         <Image
           src={`/projects/${projectName}.png`}
-          width={500}
-          height={500}
           objectFit="cover"
           mx="auto"
         />
