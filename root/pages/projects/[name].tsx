@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     props: {
       github: parsed.data.github as string,
       title: parsed.data.title as string,
-      tags: parsed.data.tags,
+      tags: parsed.data.tags ? parsed.data.tags : null,
       date: parsed.data.date as string,
       content: parsed.content,
       projectName: params.name,
