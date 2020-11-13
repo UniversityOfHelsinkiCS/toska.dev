@@ -45,12 +45,8 @@ export const Members = () => {
               <Box fontWeight="bold" fontSize="1.4rem">
                 {member.name}
               </Box>
-              <Badge
-                bg={theme.backgroundBlack}
-                color={theme.toskaYellow}
-                fontSize="0.9rem"
-              >
-                #{index < 9 && "0"}
+              <Badge bg={theme.backgroundBlack} color={theme.backgroundWhite}>
+                #{index < 10 && "0"}
                 {index}
               </Badge>
             </Flex>
@@ -60,7 +56,7 @@ export const Members = () => {
               fontSize="0.75rem"
               height="0.75rem"
               fontWeight="bold"
-              color={theme.toskaRed}
+              color={theme.toskaYellow}
             >
               {getDateString(member.joinedDate, member.alumnDate)}
             </Box>
