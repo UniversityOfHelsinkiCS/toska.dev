@@ -19,8 +19,8 @@ spec:
           volumeMounts:
             - name: quake3-server-config
               mountPath: /config
-            - name: quake3-content
-              mountPath: /assets
+            # - name: quake3-content
+            #   mountPath: /assets
         - command:
           - q3
           - content
