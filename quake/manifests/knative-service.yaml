@@ -12,7 +12,7 @@ spec:
           - q3
           - server
           - --config=/config/config.yaml
-          - --content-server=http:/quake-content-svc
+          - --content-server=http://quake-content-svc
           - --agree-eula
           image: docker.io/criticalstack/quake:latest
           name: server
