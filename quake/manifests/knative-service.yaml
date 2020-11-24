@@ -11,7 +11,7 @@ spec:
         - image: treyyoder/quakejs
           env:
             - name: SERVER
-              value: http://quake.toska.dev
+              value: "127.0.0.1"
             - name: HTTP_PORT
               value: "80"
           ports:
