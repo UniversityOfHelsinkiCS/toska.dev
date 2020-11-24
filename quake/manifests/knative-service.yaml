@@ -1,44 +1,41 @@
-apiVersion: serving.knative.dev/v1
-kind: Service
-metadata:
-  name: quake
-  annotations:
-    custom-hostname: quake.toska # staging.toska.dev
-spec:
-  template:
-    spec:
-      containers:
-        - command:
-          - q3
-          - server
-          - --config=/config/config.yaml
-          - --content-server=http://quake-content-svc
-          - --agree-eula
-          image: docker.io/criticalstack/quake:latest
-          name: server
-          volumeMounts:
-            - name: quake3-server-config
-              mountPath: /config
-      volumes:
-        - name: quake3-server-config
-          configMap:
-            name: quake3-server-config
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: quake-content
+  name: quake
 spec:
   selector:
     matchLabels:
-      run: quake-content
+      run: quake
   replicas: 1
   template:
     metadata:
       labels:
-        run: quake-content
+        run: quake
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
     spec:
       containers:
+      - command:
+        - q3
+        - server
+        - --config=/config/config.yaml
+        - --content-server=http://127.0.0.1:9090
+        - --agree-eula
+        image: docker.io/criticalstack/quake:latest
+        name: server
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        volumeMounts:
+        - name: quake3-server-config
+          mountPath: /config
+        - name: quake3-content
+          mountPath: /assets
       - command:
         - q3
         - content
@@ -51,18 +48,29 @@ spec:
         - name: quake3-content
           mountPath: /assets
       volumes:
+        - name: quake3-server-config
+          configMap:
+            name: quake3-server-config
         - name: quake3-content
           emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: quake-content-svc
+  name: quake
 spec:
   type: NodePort
   selector:
-    run: quake-content-svc
+    run: quake
   ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30001
+      name: client
+    - port: 27960
+      targetPort: 27960
+      nodePort: 30003
+      name: server
     - port: 9090
       targetPort: 9090
       nodePort: 30002
