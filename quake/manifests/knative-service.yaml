@@ -19,14 +19,6 @@ spec:
           volumeMounts:
             - name: quake3-server-config
               mountPath: /config
-        - command:
-          - q3
-          - content
-          - --seed-content-url=http://content.quakejs.com
-          image: docker.io/criticalstack/quake:latest
-          name: content-server
-          ports:
-            - containerPort: 9090
       volumes:
         - name: quake3-server-config
           configMap:
