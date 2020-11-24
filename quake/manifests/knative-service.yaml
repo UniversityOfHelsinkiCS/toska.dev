@@ -83,10 +83,11 @@ metadata:
 spec:
   rules:
   - host: quake.toska.dev
-    paths:
-      backend:
-        serviceName: quake
-        servicePort: 80
+    http:
+      paths:
+        - backend:
+            serviceName: quake
+            servicePort: 80
 ---
 apiVersion: v1
 kind: ConfigMap
