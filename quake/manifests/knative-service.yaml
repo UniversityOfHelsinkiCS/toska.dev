@@ -19,8 +19,6 @@ spec:
           volumeMounts:
             - name: quake3-server-config
               mountPath: /config
-            # - name: quake3-content
-            #   mountPath: /assets
         - command:
           - q3
           - content
@@ -29,9 +27,6 @@ spec:
           name: content-server
           ports:
             - containerPort: 9090
-          # volumeMounts:
-          #   - name: quake3-content
-          #     mountPath: /assets
       volumes:
         - name: quake3-server-config
           configMap:
