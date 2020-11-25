@@ -1,94 +1,27 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: serving.knative.dev/v1
+kind: Service
 metadata:
   name: quake
+  annotations:
+    custom-hostname: quake.toska # staging.toska.dev
 spec:
-  selector:
-    matchLabels:
-      run: quake
-  replicas: 1
   template:
-    metadata:
-      labels:
-        run: quake
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/port: '8080'
     spec:
       containers:
-      - command:
-        - q3
-        - server
-        - --config=/config/config.yaml
-        - --content-server=http://127.0.0.1:9090
-        - --agree-eula
-        image: docker.io/criticalstack/quake:latest
-        name: server
-        ports:
-        - containerPort: 8080
-        readinessProbe:
-          tcpSocket:
-            port: 8080
-          initialDelaySeconds: 15
-          periodSeconds: 5
-        volumeMounts:
-        - name: quake3-server-config
-          mountPath: /config
-        - name: quake3-content
-          mountPath: /assets
-      - command:
-        - q3
-        - content
-        - --seed-content-url=http://content.quakejs.com
-        image: docker.io/criticalstack/quake:latest
-        name: content-server
-        ports:
-        - containerPort: 9090
-        volumeMounts:
-        - name: quake3-content
-          mountPath: /assets
+        - command:
+          - q3
+          - server
+          - --config=/config/config.yaml
+          - --agree-eula
+          image: docker.io/criticalstack/quake:latest
+          name: server
+          volumeMounts:
+            - name: quake3-server-config
+              mountPath: /config
       volumes:
         - name: quake3-server-config
           configMap:
             name: quake3-server-config
-        - name: quake3-content
-          emptyDir: {}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: quake
-spec:
-  type: ClusterIP
-  selector:
-    run: quake
-  ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 8080
-      name: client
-    - port: 27960
-      targetPort: 27960
-      name: server
-    - port: 9090
-      targetPort: 9090
-      name: content
----
-apiVersion: projectcontour.io/v1
-kind: HTTPProxy
-metadata:
-  name: quake
-  labels:
-    app: quake
-spec:
-  virtualhost: 
-    fqdn: quake.toska.dev
-  routes:
-    - match: /
-      services:
-        - name: quake
-          port: 80
-
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -101,16 +34,14 @@ data:
     bot:
       minPlayers: 3
     game:
-      motd: "Welcome to Critical Stack"
+      motd: "Welcome to mluukkai simulator"
       type: FreeForAll
       forceRespawn: false
       inactivity: 10m
       quadFactor: 3
       weaponRespawn: 3
     server:
-      hostname: "quakekube"
       maxClients: 12
-      password: "changeme"
     commands:
       - addbot sarge 2
     maps:
