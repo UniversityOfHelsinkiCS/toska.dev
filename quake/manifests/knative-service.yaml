@@ -74,20 +74,20 @@ spec:
       targetPort: 9090
       name: content
 ---
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
 metadata:
   name: quake
   labels:
     app: quake
 spec:
-  rules:
-  - host: quake.toska.dev
-    http:
-      paths:
-        - backend:
-            serviceName: quake
-            servicePort: 80
+  virtualhost: quake.toska.dev
+  routes:
+    - match: /
+      services:
+          name: quake
+          port: 80
+
 ---
 apiVersion: v1
 kind: ConfigMap
