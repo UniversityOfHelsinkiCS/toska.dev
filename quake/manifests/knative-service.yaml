@@ -81,11 +81,12 @@ metadata:
   labels:
     app: quake
 spec:
-  virtualhost: quake.toska.dev
+  virtualhost: 
+    fqdn: quake.toska.dev
   routes:
     - match: /
       services:
-          name: quake
+        - name: quake
           port: 80
 
 ---
