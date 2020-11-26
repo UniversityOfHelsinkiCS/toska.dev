@@ -6,6 +6,10 @@ metadata:
     custom-hostname: quake.toska # staging.toska.dev
 spec:
   template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
     spec:
       containers:
         - command:
@@ -32,7 +36,7 @@ data:
     fragLimit: 25
     timeLimit: 15m
     bot:
-      minPlayers: 3
+      minPlayers: 2
     game:
       motd: "Welcome to mluukkai simulator"
       type: FreeForAll
