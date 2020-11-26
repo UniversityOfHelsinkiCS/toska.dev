@@ -1,0 +1,14 @@
+fragLimit: 25
+timeLimit: 10m
+game:
+  motd: "Welcome to mluukkai simulator"
+  type: FreeForAll
+  forceRespawn: false
+  inactivity: 10m
+  quadFactor: 3
+  weaponRespawn: 3
+server:
+  maxClients: 12
+maps:
+- name: q3dm17
+  type: FreeForAll
