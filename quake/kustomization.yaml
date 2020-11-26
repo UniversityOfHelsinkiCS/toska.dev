@@ -8,5 +8,4 @@ configMapGenerator:
   - name: quake3-server-config
     files: 
       - config.yaml
-    behavior: replace
     
