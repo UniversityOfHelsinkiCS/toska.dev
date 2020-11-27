@@ -1,7 +1,5 @@
-fragLimit: 15
+fragLimit: 10
 timeLimit: 10m
-cheats: 1
-sv_cheats: 1
 game:
   motd: "Welcome to mluukkai simulator"
   type: FreeForAll
@@ -9,32 +7,30 @@ game:
   inactivity: 20m
   quadFactor: 3
   weaponRespawn: 3
-commands:
-  - sv_cheats 1
 server:
   maxClients: 12
 maps:
 - name: q3dm1
   type: FreeForAll
-  timeLimit: 15m
-- name: q3dm14
-  type: FreeForAll
-  timeLimit: 15m
-- name: q3dm12
-  type: FreeForAll
-  timeLimit: 15m
+  timeLimit: 10m
 - name: q3dm17
   type: FreeForAll
-  timeLimit: 1m
+  timeLimit: 10m
+- name: q3dm14
+  type: FreeForAll
+  timeLimit: 10m
+- name: q3dm12
+  type: FreeForAll
+  timeLimit: 10m
 - name: q3dm6
   type: FreeForAll
-  timeLimit: 15m
+  timeLimit: 10m
 - name: q3dm11
   type: FreeForAll
-  timeLimit: 15m
+  timeLimit: 10m
 - name: q3dm19
   type: FreeForAll
-  timeLimit: 15m
+  timeLimit: 10m
 - name: q3dm7
   type: FreeForAll
-  timeLimit: 15m
+  timeLimit: 10m
