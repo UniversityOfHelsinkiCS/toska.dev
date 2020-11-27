@@ -1,5 +1,7 @@
 fragLimit: 15
 timeLimit: 10m
+cheats: 1
+sv_cheats: 1
 game:
   motd: "Welcome to mluukkai simulator"
   type: FreeForAll
@@ -7,6 +9,8 @@ game:
   inactivity: 20m
   quadFactor: 3
   weaponRespawn: 3
+commands:
+  - sv_cheats 1
 server:
   maxClients: 12
 maps:
