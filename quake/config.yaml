@@ -16,9 +16,7 @@ maps:
 - name: q3dm17
   type: FreeForAll
   timeLimit: 10m
-- name: q3dm14
-  type: FreeForAll
-  timeLimit: 10m
+#- name: q3dm14 Does not work
 - name: q3dm12
   type: FreeForAll
   timeLimit: 10m
