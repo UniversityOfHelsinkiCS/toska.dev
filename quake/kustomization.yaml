@@ -4,7 +4,7 @@ resources:
 - manifests/knative-service.yaml
 
 generatorOptions:
- disableNameSuffixHash: true
+  disableNameSuffixHash: true
 
 configMapGenerator:
   - name: quake3-server-config
