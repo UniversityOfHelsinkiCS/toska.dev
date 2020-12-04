@@ -9,17 +9,20 @@ game:
   weaponRespawn: 3
 server:
   maxClients: 12
+bot:	
+  minPlayers: 2
 maps:
-- name: q3dm1
+- name: q3dm7
   type: FreeForAll
   timeLimit: 10m
 - name: q3dm17
   type: FreeForAll
   timeLimit: 10m
-#- name: q3dm14 Does not work
-- name: q3dm12
+- name: q3dm1
   type: FreeForAll
   timeLimit: 10m
+#- name: q3dm14 Does not work
+#- name: q3dm12 Does not work
 - name: q3dm6
   type: FreeForAll
   timeLimit: 10m
@@ -27,8 +30,5 @@ maps:
   type: FreeForAll
   timeLimit: 10m
 - name: q3dm19
-  type: FreeForAll
-  timeLimit: 10m
-- name: q3dm7
   type: FreeForAll
   timeLimit: 10m
