@@ -72,7 +72,7 @@ const ProjectPage = ({
 }: Props) => (
   <>
     <Head>
-      <title>{`${title} - Projektit - TOSKA`}</title>
+      <title>{`${title} - Projektit - Toska`}</title>
     </Head>
     <Section bg="WHITE" p={4}>
       <NextLink href="/">

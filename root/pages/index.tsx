@@ -53,7 +53,7 @@ const IndexPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <>
     <Head>
-      <title>TOSKA</title>
+      <title>Toska</title>
     </Head>
     <Section bg="WHITE">
       <Image src={toskaLogo} width="24rem" />
