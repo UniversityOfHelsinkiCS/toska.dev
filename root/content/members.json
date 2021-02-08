@@ -125,7 +125,15 @@
   },
   {
     "name": "Olli",
-    "githubName": "woltsu"
+    "githubName": "woltsu",
+    "joinedDate": {
+      "month": 7,
+      "year": 2019
+    },
+    "alumnDate": {
+      "month": 6
+      "year": 2020
+    }
   },
   {
     "name": "Joona",
