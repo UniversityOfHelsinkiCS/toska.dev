@@ -1,6 +1,7 @@
 import { Badge, Box, Flex, Image, Wrap, WrapItem } from "@chakra-ui/core";
 import members from "content/members.json";
 import React from "react";
+import { FaLinkedin } from "react-icons/fa";
 import { theme } from "utils/theme";
 
 const getDateString = (
@@ -51,15 +52,27 @@ export const Members = () => {
               </Badge>
             </Flex>
 
-            <Box
+            <Flex
               mt="0.4rem"
               fontSize="0.75rem"
               height="0.75rem"
               fontWeight="bold"
               color={theme.toskaYellow}
+              justify="space-between"
+              align="center"
             >
               {getDateString(member.joinedDate, member.alumnDate)}
-            </Box>
+              {/* Can remove as any after first linkedInName gets added */}
+              {(member as any).linkedInName && (
+                <a
+                  href={`https://www.linkedin.com/in/${
+                    (member as any).linkedInName
+                  }/`}
+                >
+                  <FaLinkedin />
+                </a>
+              )}
+            </Flex>
           </Box>
         </WrapItem>
       ))}

@@ -50,9 +50,10 @@ Text on top below the logo and "Helsingin yliopiston tietojenkäsittelytieteen o
 
 _Note the order in the array is meaningful_
 
-| Property   | Type                           | Description                                                      |
-| ---------- | ------------------------------ | ---------------------------------------------------------------- |
-| name       | string                         | First name of the members.                                       |
-| githubName | string                         | GitHub user of the member. Also used for fetching the avatar.    |
-| joinedDate | {month: number, year: number}  | Month and year of when the member joined.                        |
-| alumnDate  | {month: number, year: number}? | Month and year of when the member became an alumn if applicable. |
+| Property     | Type                           | Description                                                      |
+| ------------ | ------------------------------ | ---------------------------------------------------------------- |
+| name         | string                         | First name of the members.                                       |
+| githubName   | string                         | GitHub user of the member. Also used for fetching the avatar.    |
+| linkedInName | string                         | LinkedIn user of the member.                                     |
+| joinedDate   | {month: number, year: number}  | Month and year of when the member joined.                        |
+| alumnDate    | {month: number, year: number}? | Month and year of when the member became an alumn if applicable. |
