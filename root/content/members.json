@@ -165,6 +165,10 @@
     "joinedDate": {
       "month": 1,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 1,
+      "year":2021
     }
   },
   {
