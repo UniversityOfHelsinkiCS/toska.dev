@@ -242,5 +242,13 @@
       "month": 4,
       "year": 2021
     }
+  },
+  {
+    "name": "Ilmari",
+    "githubName": "ilmarikyl",
+    "joinedDate": {
+      "month": 3,
+      "year": 2021
+    }
   }
 ]
