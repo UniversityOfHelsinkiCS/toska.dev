@@ -228,6 +228,14 @@
     }
   },
   {
+    "name": "Otto",
+    "githubName": "otahontas",
+    "joinedDate": {
+      "month": 2,
+      "year": 2021
+    }
+  },
+  {
     "name": "Ilmari",
     "githubName": "ilmarikyl",
     "joinedDate": {
