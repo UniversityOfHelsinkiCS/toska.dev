@@ -54,7 +54,6 @@ const IndexPage = ({
   <>
     <Head>
       <title>Toska</title>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH34KEG7NL"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
