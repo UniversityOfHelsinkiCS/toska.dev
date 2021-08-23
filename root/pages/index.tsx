@@ -69,7 +69,9 @@ const IndexPage = ({
     </Head>
     <Section bg="WHITE">
       <Tooltip label="Logon design Jukka Päivinen" placement="right">
-        <Image src={toskaLogo} width="24rem" />
+        <a href="https://paivinenjukka.work/" >
+          <Image src={toskaLogo} width="24rem" />
+        </a>
       </Tooltip>
       <Box textAlign="center" letterSpacing={1} color={theme.textGrey}>
         Helsingin yliopiston tietojenkäsittelytieteen osaston
