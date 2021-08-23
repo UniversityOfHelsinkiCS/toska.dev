@@ -1,4 +1,4 @@
-import { Box, Flex, Image } from "@chakra-ui/core";
+import { Box, Flex, Image, Tooltip } from "@chakra-ui/core";
 import toskaLogo from "assets/toskaLogo.svg";
 import toskaMopo from "assets/toskaMopo.png";
 import { Members } from "components/Members";
@@ -68,7 +68,9 @@ const IndexPage = ({
       />
     </Head>
     <Section bg="WHITE">
-      <Image src={toskaLogo} width="24rem" />
+      <Tooltip label="Logon design Jukka Päivinen" placement="right">
+        <Image src={toskaLogo} width="24rem" />
+      </Tooltip>
       <Box textAlign="center" letterSpacing={1} color={theme.textGrey}>
         Helsingin yliopiston tietojenkäsittelytieteen osaston
         sovelluskehitysakatemia
@@ -97,6 +99,7 @@ const IndexPage = ({
             <Box as={FaGamepad} m="1rem" />
           </a>
         </Flex>
+        <a href="https://paivinenjukka.work/" style={{color: '#a5a5a5'}}>Toska-logon suunnitellut Jukka Päivinen</a>
       </>
     </Section>
   </>
