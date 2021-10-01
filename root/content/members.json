@@ -262,5 +262,13 @@
       "month": 4,
       "year": 2021
     }
+  },
+  {
+    "name": "Petri",
+    "githubName": "petrimus",
+    "joinedDate": {
+      "month": 6,
+      "year": 2021
+    }   
   }
 ]
