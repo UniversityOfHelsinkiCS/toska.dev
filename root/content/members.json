@@ -197,6 +197,10 @@
     "joinedDate": {
       "month": 2,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 4,
+      "year": 2021
     }
   },
   {
@@ -213,6 +217,10 @@
     "joinedDate": {
       "month": 5,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 5,
+      "year": 2021
     }
   },
   {
@@ -270,5 +278,13 @@
       "month": 6,
       "year": 2021
     }   
+  },
+  {
+    "name": "Mitja",
+    "githubName": "dogamak",
+    "joinedDate": {
+      "month": 10,
+      "year": 2021
+    }
   }
 ]
