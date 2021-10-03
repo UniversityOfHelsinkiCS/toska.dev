@@ -19,6 +19,7 @@ export const Members = () => {
     <Wrap justify="center" spacing={8}>
       {members.map((member, index) => (
         <WrapItem
+          className="expand"
           as="div"
           display="flex"
           flexDir="column"
@@ -65,9 +66,8 @@ export const Members = () => {
               {/* Can remove as any after first linkedInName gets added */}
               {(member as any).linkedInName && (
                 <a
-                  href={`https://www.linkedin.com/in/${
-                    (member as any).linkedInName
-                  }/`}
+                  href={`https://www.linkedin.com/in/${(member as any).linkedInName
+                    }/`}
                 >
                   <FaLinkedin />
                 </a>
