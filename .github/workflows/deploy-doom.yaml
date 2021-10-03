@@ -2,6 +2,8 @@ name: Deploy doom
 
 on:
   push:
+    branches:
+      - master
     paths:
       - '.github/workflows/deploy-doom.yaml'
       - 'doom/**'
