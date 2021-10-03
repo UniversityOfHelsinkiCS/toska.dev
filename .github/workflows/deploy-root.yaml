@@ -2,6 +2,8 @@ name: Deploy toska.dev
 
 on:
   push:
+    branches:
+      - master
     paths:
       - '.github/workflows/deploy-root.yaml'
       - 'root/**'
