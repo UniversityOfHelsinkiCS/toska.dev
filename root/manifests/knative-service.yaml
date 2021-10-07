@@ -7,7 +7,8 @@ metadata:
 spec:
   template:
     metadata:
-      autoscaling.knative.dev/minScale: "1"
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
         - image: IMAGE_FROM_KUSTOMIZATION
