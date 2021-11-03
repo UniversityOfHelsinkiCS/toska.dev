@@ -1,7 +1,8 @@
-import { Badge, Box, Flex, Heading, Image, Link } from "@chakra-ui/core";
+import { Badge, Box, Flex, Heading, Image, Link, useMediaQuery } from "@chakra-ui/core";
 import NextLink from "next/link";
 import { theme } from "utils/theme";
 import Markdown from "./Markdown";
+
 
 export const Projects = ({
   projects,
@@ -14,6 +15,8 @@ export const Projects = ({
     key: number | null;
   }[];
 }) => {
+  const [isDesktopWidth] = useMediaQuery("(min-width: 800px)")
+
   return (
     <>
       {projects
@@ -28,8 +31,8 @@ export const Projects = ({
         .map((project, i) => {
           const isEven = i % 2 === 0;
           return (
-            <Flex key={project.name} justifyContent="space-evenly" my={12}>
-              {isEven && (
+            <Flex key={project.name} justifyContent="space-evenly" align="center" my={12} direction={isDesktopWidth ? "row" : "column"}>
+              {(!isDesktopWidth || isEven) && (
                 <Image
                   objectFit="cover"
                   src={`/projects/${project.name}.png`}
@@ -63,7 +66,7 @@ export const Projects = ({
                   </Link>
                 </NextLink>
               </Box>
-              {!isEven && (
+              {isDesktopWidth && !isEven &&  (
                 <Image
                   objectFit="cover"
                   src={`/projects/${project.name}.png`}
