@@ -2,7 +2,7 @@ import { Badge, Box, Flex, Heading, Image, Link, useMediaQuery } from "@chakra-u
 import NextLink from "next/link";
 import { theme } from "utils/theme";
 import Markdown from "./Markdown";
-
+import React, { useState, useEffect } from "react";
 
 export const Projects = ({
   projects,
@@ -15,7 +15,14 @@ export const Projects = ({
     key: number | null;
   }[];
 }) => {
-  const [isDesktopWidth] = useMediaQuery("(min-width: 800px)")
+  const [isDesktopWidth, setIsDesktopWidth] = useState(false);
+  const [minWidthMediaQuery] = useMediaQuery("(min-width: 800px)")
+
+  useEffect(() => {
+    if(minWidthMediaQuery !== isDesktopWidth){
+      setIsDesktopWidth(minWidthMediaQuery);
+    }
+  }, [minWidthMediaQuery])
 
   return (
     <>
