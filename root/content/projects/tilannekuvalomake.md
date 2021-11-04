@@ -4,8 +4,6 @@ title: Tilannekuvalomake
 date: Helmikuu 2020 -
 ---
 
-Opetushallinnon tilannekuvalomake. Projektin alussa tiedossa oli vain niukasti mitä uusia ominaisuuksia vanhaan lomakkeeseen verrattuna tultaisiin tarvitsemaan. Oikeastaan sovelluksen edetessä lomakkeesta kasvoi täysin uudenlainen palvelu.
+Tilannekuvalomake on Helsingin yliopiston koulutusohjelmien johtoryhmien käyttöön toteutettu seurantatyökalu. Koulutusohjelmat tarkastelevat syksyisin mennyttä vuotta ja suunnittelevat samalla tulevaa, ja Lomake toimii tämän keskustelun dokumentoinnin välineenä ja asialistana. Lomakkeella on noin 20 kysymystä koulutusohjelmien tilanteeseen liittyen, ja koulutusohjelmien johtoryhmät täyttävät lomakkeen vuosittain. 
 
-Lomakkeessa on WebSocketilla toteutettu ominaisuus, jossa usea käyttäjä voi täyttää sitä samanaikaisesti. Ideana on että lomaketta ei oikeastaan koskaan lähetetä vaan sitä voi halutessaan työstää pikkuhiljaa.
-
-Vanhassa lomakkeessa kaikki datan analysointi piti tehdä erikseen esimerkiksi Excelissä. Uudessa versiossa hyvät analysointiominaisuudet olivat keskiössä. Tavoitteena onkin, että palvelussa saa heti hyvän yleiskuvan ohjelmien tilanteesta sekä kehityksen suunnasta. Toki jos datan analysointia halutaan tehdä erikseen tarjoaa lomake myös vastausten PDF- tai CSV-muodossa lataamisen.
+Aiemmin samainen tilannekuvatieto oli hajallaan erinäisissä Exceleissä ja Word-tiedostoissa. Tämä hidasti analysointityötä, jota opetushallinto ohjelmien tilanteesta tekee. Myös eri vuosien tietojen vertailu oli haastavaa. Tilannekuvalomake tuo kaikkien ohjelmien tilannetiedot yhteen paikkaan. Lomakkeelle rakennetut raportointinäkymät helpottavat kokonaistilanteen hahmottamista ja mahdollistavat myös ohjelmien tietojen tarkastelun esimerkiksi tiedekunnittain tai tutkintotasoittain.
