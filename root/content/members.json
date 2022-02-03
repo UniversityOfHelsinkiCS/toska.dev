@@ -286,5 +286,13 @@
       "month": 10,
       "year": 2021
     }
+  },
+  {
+    "name": "Valtteri",
+    "githubName": "nettivastaava",
+    "joinedDate": {
+      "month": 2,
+      "year": 2022
+    }
   }
 ]
