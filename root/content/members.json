@@ -302,5 +302,13 @@
       "month": 2,
       "year": 2022
     }
-  }
+  },
+  {
+    "name": "Veikko",
+    "githubName": "Veikkosuhonen",
+    "joinedDate": {
+      "month": 2,
+      "year": 2022
+    }
+  },
 ]
