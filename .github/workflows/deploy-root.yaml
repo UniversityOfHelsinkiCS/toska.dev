@@ -15,7 +15,7 @@ defaults:
     working-directory: root
 
 jobs:
-  setup-build-publish-deploy:
+  setup-build-publish:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
 
@@ -42,19 +42,3 @@ jobs:
           context: ./root
           file: ./root/Dockerfile
           tags: toska/toska-dev:${{ github.sha }}
-
-      - uses: Azure/setup-kubectl@v1
-
-      - uses: Azure/k8s-set-context@v1
-        with:
-          kubeconfig: ${{ secrets.KUBE_CONFIG }}
-
-      - name: Set up Kustomize
-        run: |-
-          curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
-          chmod u+x ./kustomize
-      
-      - name: Deploy
-        run: |-
-          ./kustomize edit set image IMAGE_FROM_KUSTOMIZATION=toska/toska-dev:${{ github.sha }}
-          kubectl apply -k .
