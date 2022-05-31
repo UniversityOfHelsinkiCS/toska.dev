@@ -6,6 +6,9 @@ metadata:
     custom-hostname: toska # staging.toska.dev
 spec:
   template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
         - image: IMAGE_FROM_KUSTOMIZATION

@@ -2,6 +2,8 @@ name: Deploy quake
 
 on:
   push:
+    branches:
+      - master
     paths:
       - '.github/workflows/deploy-quake.yaml'
       - 'quake/**'
