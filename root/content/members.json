@@ -269,6 +269,10 @@
     "joinedDate": {
       "month": 6,
       "year": 2021
-    }   
+    },
+    "alumnDate": {
+      "month": 5,
+      "year": 2022
+    } 
   }
 ]
