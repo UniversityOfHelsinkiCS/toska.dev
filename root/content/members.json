@@ -128,7 +128,7 @@
     },
     "alumnDate": {
       "month": 9,
-      "year":2020
+      "year": 2020
     }
   },
   {
@@ -164,7 +164,7 @@
     },
     "alumnDate": {
       "month": 2,
-      "year":2021
+      "year": 2021
     }
   },
   {
@@ -176,7 +176,7 @@
     },
     "alumnDate": {
       "month": 1,
-      "year":2021
+      "year": 2021
     }
   },
   {
@@ -197,6 +197,10 @@
     "joinedDate": {
       "month": 2,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 4,
+      "year": 2021
     }
   },
   {
@@ -213,6 +217,10 @@
     "joinedDate": {
       "month": 5,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 5,
+      "year": 2021
     }
   },
   {
@@ -261,6 +269,10 @@
     "joinedDate": {
       "month": 4,
       "year": 2021
+    },
+    "alumnDate": {
+      "month": 4,
+      "year": 2022
     }
   },
   {
@@ -273,6 +285,47 @@
     "alumnDate": {
       "month": 5,
       "year": 2022
-    } 
+    }
+  },
+  {
+    "name": "Mitja",
+    "githubName": "dogamak",
+    "joinedDate": {
+      "month": 10,
+      "year": 2021
+    }
+  },
+  {
+    "name": "Sami",
+    "githubName": "SNurmivaara",
+    "joinedDate": {
+      "month": 1,
+      "year": 2022
+    }
+  },
+  {
+    "name": "Valtteri",
+    "githubName": "nettivastaava",
+    "joinedDate": {
+      "month": 2,
+      "year": 2022
+    }
+  },
+  {
+    "name": "Veikko",
+    "githubName": "Veikkosuhonen",
+    "joinedDate": {
+      "month": 2,
+      "year": 2022
+    }
+  },
+  {
+    "name": "Miko",
+    "githubName": "Keskimaki",
+    "joinedDate": {
+      "month": 5,
+      "year": 2022
+    }
   }
 ]
+

@@ -101,7 +101,7 @@ const IndexPage = ({
             <Box as={FaGamepad} m="1rem" />
           </a>
         </Flex>
-        <a href="https://paivinenjukka.work/" style={{color: '#a5a5a5'}}>Toska-logon suunnitellut Jukka Päivinen</a>
+        <a href="https://paivinenjukka.work/" style={{ color: '#a5a5a5' }}>Toska-logon suunnitellut Jukka Päivinen</a>
       </>
     </Section>
   </>
