@@ -209,6 +209,10 @@
     "joinedDate": {
       "month": 3,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 12,
+      "year": 2022
     }
   },
   {
@@ -229,6 +233,10 @@
     "joinedDate": {
       "month": 9,
       "year": 2020
+    },
+    "alumnDate": {
+      "month": 8,
+      "year": 2022
     }
   },
   {
@@ -240,6 +248,10 @@
     },
     "alumnDate": {
       "month": 9,
+      "year": 2022
+    },
+    "alumnDate": {
+      "month": 8,
       "year": 2022
     }
   },
@@ -261,6 +273,10 @@
     "joinedDate": {
       "month": 3,
       "year": 2021
+    },
+    "alumnDate": {
+      "month": 3,
+      "year": 2022
     }
   },
   {
@@ -305,6 +321,10 @@
     "joinedDate": {
       "month": 10,
       "year": 2021
+    },
+    "alumnDate": {
+      "month": 9,
+      "year": 2022
     }
   },
   {
@@ -313,6 +333,10 @@
     "joinedDate": {
       "month": 1,
       "year": 2022
+    },
+    "alumnDate": {
+      "month": 8,
+      "year": 2022
     }
   },
   {
@@ -320,6 +344,10 @@
     "githubName": "nettivastaava",
     "joinedDate": {
       "month": 2,
+      "year": 2022
+    },
+    "alumnDate": {
+      "month": 12,
       "year": 2022
     }
   },
