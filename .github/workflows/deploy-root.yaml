@@ -55,7 +55,7 @@ jobs:
         id: build-image
         uses: redhat-actions/buildah-build@v2
         with:
-          image: toksa-dev
+          image: toska-dev
           tags: production ${{ github.sha }}
           context: ./root
           containerfiles: |
