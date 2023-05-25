@@ -1,6 +1,8 @@
-FROM node:14-alpine as build-stage
+FROM registry.access.redhat.com/ubi8/nodejs-14-minimal as build-stage
 
-WORKDIR /usr/src/app
+ENV TZ="Europe/Helsinki"
+
+WORKDIR /opt/app-root/src
 
 COPY package* ./
 
@@ -10,12 +12,12 @@ COPY . .
 
 RUN npm run build
 
-FROM node:14-alpine
+FROM registry.access.redhat.com/ubi8/nodejs-14-minimal
 
 RUN npm install -g serve
 
-COPY --from=build-stage /usr/src/app/out/ /usr/src/app
+COPY --from=build-stage /opt/app-root/src/out/ /opt/app-root/src
 
 EXPOSE 8080
 
-CMD serve -l 8080 -s /usr/src/app
+CMD serve -l 8080 -s /opt/app-root/src
