@@ -42,30 +42,3 @@ jobs:
           context: ./root
           file: ./root/Dockerfile
           tags: toska/toska-dev:${{ github.sha }}
-
-  build-and-push:
-    name: Build and push to quay.io
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Build image
-        id: build-image
-        uses: redhat-actions/buildah-build@v2
-        with:
-          image: toska-dev
-          tags: production ${{ github.sha }}
-          context: ./root
-          containerfiles: |
-            ./root/Dockerfile
-
-      - name: Push to quay.io
-        uses: redhat-actions/push-to-registry@v2
-        with:
-          image: ${{ steps.build-image.outputs.image }}
-          tags: ${{ steps.build-image.outputs.tags }}
-          registry: quay.io/toska
-          username: toska+github
-          password: ${{ secrets.QUAY_IO_TOKEN }}
