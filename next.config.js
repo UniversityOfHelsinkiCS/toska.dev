@@ -1,10 +1,9 @@
-const withImages = require("next-images");
-module.exports = withImages({
-  webpack: function (config) {
+module.exports = {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
       use: "raw-loader",
     });
     return config;
   },
-});
+};

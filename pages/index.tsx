@@ -70,7 +70,7 @@ const IndexPage = ({
     <Section bg="WHITE">
       <Tooltip label="Logon design Jukka Päivinen" placement="right">
         <a href="https://paivinenjukka.work/" >
-          <Image src={toskaLogo} width="24rem" />
+          <Image src={toskaLogo.src} width="24rem" />
         </a>
       </Tooltip>
       <Box textAlign="center" letterSpacing={1} color={theme.textGrey}>
@@ -89,7 +89,7 @@ const IndexPage = ({
     </Section>
     <Section bg="BLACK">
       <>
-        <Image src={toskaMopo} loading="lazy" w="4rem" mb="1rem" />
+        <Image src={toskaMopo.src} loading="lazy" w="4rem" mb="1rem" />
         <Flex color={theme.toskaYellow} fontSize="4rem">
           <a href="https://github.com/UniversityOfHelsinkiCS">
             <Box as={FaGithub} m="1rem" />
