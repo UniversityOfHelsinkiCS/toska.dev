@@ -1,4 +1,4 @@
-import { BoxProps, Container, Flex, Heading } from "@chakra-ui/core";
+import { BoxProps, Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import { theme } from "../utils/theme";
 

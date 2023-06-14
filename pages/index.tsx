@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Tooltip } from "@chakra-ui/core";
+import { Box, Flex, Image, Tooltip } from "@chakra-ui/react";
 import toskaLogo from "assets/toskaLogo.svg";
 import toskaMopo from "assets/toskaMopo.png";
 import { Members } from "components/Members";

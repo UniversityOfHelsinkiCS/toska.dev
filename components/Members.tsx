@@ -1,4 +1,4 @@
-import { Badge, Box, Flex, Image, Wrap, WrapItem } from "@chakra-ui/core";
+import { Badge, Box, Flex, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import members from "content/members.json";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";

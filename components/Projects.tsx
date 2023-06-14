@@ -1,4 +1,4 @@
-import { Badge, Box, Flex, Heading, Image, Link, useMediaQuery } from "@chakra-ui/core";
+import { Badge, Box, Flex, Heading, Image, Link, useMediaQuery } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { theme } from "utils/theme";
 import Markdown from "./Markdown";

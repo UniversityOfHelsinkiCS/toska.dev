@@ -5,7 +5,7 @@ import {
   Heading,
   Image,
   Link as ChakraLink,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import toskaLogo from "assets/toskaLogo.svg";
 import Markdown from "components/Markdown";
 import Section from "components/Section";
@@ -77,7 +77,7 @@ const ProjectPage = ({
     <Section bg="WHITE" p={4}>
       <NextLink href="/">
         <a>
-          <Image src={toskaLogo} w="6rem" />
+          <Image src={toskaLogo.src} w="6rem" />
         </a>
       </NextLink>
     </Section>

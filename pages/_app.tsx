@@ -1,4 +1,4 @@
-import { ChakraProvider, DarkMode } from "@chakra-ui/core";
+import { ChakraProvider, DarkMode } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import "./styles.css"
 

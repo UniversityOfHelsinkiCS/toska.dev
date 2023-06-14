@@ -8,7 +8,7 @@ import {
   List,
   ListItem,
   Text,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
