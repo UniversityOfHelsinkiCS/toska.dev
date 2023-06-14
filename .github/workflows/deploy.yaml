@@ -4,19 +4,10 @@ on:
   push:
     branches:
       - master
-    paths:
-      - '.github/workflows/deploy-root.yaml'
-      - 'root/**'
   workflow_dispatch:
-    
-
-defaults:
-  run:
-    working-directory: root
 
 jobs:
-  setup-build-publish:
-    name: Setup, Build, Publish, and Deploy
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
