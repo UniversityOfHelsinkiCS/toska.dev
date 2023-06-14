@@ -20,9 +20,8 @@ jobs:
         with:
           image: toska-dev
           tags: production ${{ github.sha }}
-          context: ./root
           containerfiles: |
-            ./root/Dockerfile
+            ./Dockerfile
 
       - name: Push to quay.io
         uses: redhat-actions/push-to-registry@v2
