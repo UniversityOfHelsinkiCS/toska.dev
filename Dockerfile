@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nodejs-14-minimal as build-stage
+FROM registry.access.redhat.com/ubi9/nodejs-16-minimal as build-stage
 
 ENV TZ="Europe/Helsinki"
 
@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm run build
 
-FROM registry.access.redhat.com/ubi8/nodejs-14-minimal
+FROM registry.access.redhat.com/ubi9/nodejs-16-minimal
 
 RUN npm install -g serve
 
