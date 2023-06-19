@@ -9,11 +9,11 @@
 
 ## Adding content
 
-Content from the site comes from the files in the `root/content` folder. `.md` files support Markdown syntax as you might be able to guess but notice in order to use other elements than basic bolding and italicized further setup is needed.
+Content from the site comes from the files in the `content` folder. `.md` files support Markdown syntax as you might be able to guess but notice in order to use other elements than basic bolding and italicized further setup is needed.
 
 ### Adding a new projects
 
-1. Make a new .md file to the `root/content/projects` folder.
+1. Make a new .md file to the `content/projects` folder.
 
 - Name of the file is meaningful (decides the URL)
 
@@ -39,7 +39,7 @@ key: (optional - defaults to 0) Decides the order on the front page. Smaller num
 
 - First paragraph is what is shown as preview on the front page.
 
-4. Add an image (square aspect ratio - recommended approximately 1000x1000) of the project to `root/public/projects/` in .png format using the same name as the .md made in step 1.
+4. Add an image (square aspect ratio - recommended approximately 1000x1000) of the project to `public/projects/` in .png format using the same name as the .md made in step 1.
 
 ### intro.md
 
