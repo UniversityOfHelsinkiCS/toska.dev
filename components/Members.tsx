@@ -63,10 +63,9 @@ export const Members = () => {
               align="center"
             >
               {getDateString(member.joinedDate, member.alumnDate)}
-              {/* Can remove as any after first linkedInName gets added */}
-              {(member as any).linkedInName && (
+              {member.linkedInName && (
                 <a
-                  href={`https://www.linkedin.com/in/${(member as any).linkedInName
+                  href={`https://www.linkedin.com/in/${member.linkedInName
                     }/`}
                 >
                   <FaLinkedin />
