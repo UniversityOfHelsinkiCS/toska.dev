@@ -4,9 +4,8 @@
 
 ## Starting the project locally
 
-1. `cd root`
-2. `npm i`
-3. `npm run dev`
+1. `npm i`
+2. `npm run dev`
 
 ## Adding content
 
