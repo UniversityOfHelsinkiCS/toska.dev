@@ -289,7 +289,7 @@
     "alumnDate": {
       "month": 5,
       "year": 2022
-    } 
+    }
   },
   {
     "name": "Olli",
@@ -427,6 +427,10 @@
     "joinedDate": {
       "month": 4,
       "year": 2023
+    },
+    "alumnDate": {
+      "month": 8,
+      "year": 2024
     }
   },
   {
