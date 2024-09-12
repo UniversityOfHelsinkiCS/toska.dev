@@ -1,6 +1,7 @@
 import { Box, Flex, Image, Tooltip } from "@chakra-ui/react";
 import toskaLogo from "assets/toskaLogo.svg";
 import toskaMopo from "assets/toskaMopo.png";
+import Markdown from "components/Markdown";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import Section from "components/Section";
@@ -11,7 +12,6 @@ import Head from "next/head";
 import { join } from "path";
 import { FaGamepad, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import ReactMarkdown from "react-markdown";
 import { theme } from "utils/theme";
 
 export const getStaticProps = async () => {
@@ -78,7 +78,7 @@ const IndexPage = ({
         sovelluskehitysakatemia
       </Box>
       <Box mt={12}>
-        <ReactMarkdown source={introText} />
+        <Markdown value={introText} />
       </Box>
     </Section>
     <Section bg="BLACK" header="Projektit">
