@@ -510,5 +510,14 @@
       "month": 1,
       "year": 2025
     }
+  },
+    {
+    "name": "Ben",
+    "githubName": "sutigit",
+    "linkedInName": "ben-panyanil",
+    "joinedDate": {
+      "month": 1,
+      "year": 2025
+    }
   }
 ]
