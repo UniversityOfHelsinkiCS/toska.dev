@@ -515,5 +515,14 @@
       "month": 1,
       "year": 2025
     }
+  },
+  {
+    "name": "Joonas",
+    "githubName": "joonas-a",
+    "linkedInName": "joonasahovalli",
+    "joinedDate": {
+      "month": 1,
+      "year": 2025
+    }
   }
 ]
