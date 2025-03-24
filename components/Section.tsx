@@ -8,7 +8,7 @@ interface SectionProps {
   wide?: boolean;
 }
 
-const Section: React.FC<SectionProps & BoxProps> = ({
+export const Section: React.FC<SectionProps & BoxProps> = ({
   bg,
   header,
   wide = false,
@@ -43,5 +43,3 @@ const Section: React.FC<SectionProps & BoxProps> = ({
     </Flex>
   );
 };
-
-export default Section;

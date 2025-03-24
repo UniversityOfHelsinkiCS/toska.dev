@@ -1,13 +1,15 @@
-import { ChakraProvider, DarkMode } from "@chakra-ui/react";
+import { CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
 import type { AppProps } from "next/app";
-import "./styles.css"
+
+import { theme } from "../utils/theme";
+import "./styles.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider resetCSS>
-      <DarkMode>
-        <Component {...pageProps} />
-      </DarkMode>
-    </ChakraProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
   );
 }
