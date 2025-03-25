@@ -10,8 +10,7 @@ import {
 import NextLink from "next/link";
 import React, { useState, useEffect } from "react";
 
-import Markdown from "components/Markdown";
-import { Section } from "components/Section";
+import { MarkdownContainer } from "components/MarkdownContainer";
 import { theme } from "utils/theme";
 
 export const Projects = ({
@@ -35,7 +34,7 @@ export const Projects = ({
   }, [minWidthMediaQuery]);
 
   return (
-    <Section title="Projektit">
+    <>
       {projects
         .sort((a, b) => {
           const aKey = a.key ?? 0;
@@ -82,7 +81,7 @@ export const Projects = ({
                     ))}
                   </Box>
                 )}
-                <Markdown value={project.content.split("\n")[1]} />{" "}
+                <MarkdownContainer value={project.content.split("\n")[1]} />{" "}
                 <NextLink href={`/projects/${project.name}`}>
                   <Link color={isEven ? theme.toskaYellow : theme.toskaRed}>
                     Lue lisää
@@ -101,6 +100,6 @@ export const Projects = ({
             </Flex>
           );
         })}
-    </Section>
+    </>
   );
 };

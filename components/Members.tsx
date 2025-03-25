@@ -2,7 +2,6 @@ import { Badge, Box, Flex, Image, Wrap, WrapItem } from "@chakra-ui/react";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
-import { Section } from "components/Section";
 import members from "content/members.json";
 import { theme } from "utils/theme";
 
@@ -18,7 +17,7 @@ const getDateString = (
 
 export const Members = () => {
   return (
-    <Section title="Jäsenet">
+    <>
       <Wrap justify="center" spacing={8}>
         {members.map((member, index) => (
           <WrapItem
@@ -78,6 +77,6 @@ export const Members = () => {
           </WrapItem>
         ))}
       </Wrap>
-    </Section>
+    </>
   );
 };

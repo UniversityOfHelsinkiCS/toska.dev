@@ -11,13 +11,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import ReactMarkdown from "react-markdown";
+
 import { theme } from "utils/theme";
 
-interface MarkdownProps {
-  value: string;
-}
-
-const Markdown: React.FC<MarkdownProps> = ({ value }) => {
+export const MarkdownContainer = ({ value }: { value: string }) => {
   //https://github.com/mustaphaturhan/chakra-ui-markdown-renderer/blob/master/src/index.js
   const ChakraUIRenderer = () => {
     function getCoreProps(props: any) {
@@ -141,5 +138,3 @@ const Markdown: React.FC<MarkdownProps> = ({ value }) => {
     />
   );
 };
-
-export default Markdown;

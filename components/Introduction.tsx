@@ -1,10 +1,5 @@
-import Markdown from "components/Markdown";
-import { Section } from "components/Section";
+import { MarkdownContainer } from "components/MarkdownContainer";
 
 export const Introduction = ({ introText }: { introText: string }) => {
-  return (
-    <Section title="Mikä Toska?">
-      <Markdown value={introText} />
-    </Section>
-  );
+  return <MarkdownContainer value={introText} />;
 };

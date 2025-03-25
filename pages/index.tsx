@@ -1,4 +1,4 @@
-import { Container, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import fs from "fs";
 import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
@@ -10,6 +10,7 @@ import { Introduction } from "components/Introduction";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import { ToskaLogo } from "components/ToskaLogo";
+import { Section } from "components/Section";
 
 export const getStaticProps = async () => {
   const introText = await require("../content/intro.md");
@@ -47,19 +48,48 @@ export const getStaticProps = async () => {
 const IndexPage = ({
   introText,
   projects,
-}: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <Container maxWidth="lg">
-    <Head>
-      <title>Toska</title>
-    </Head>
-    <Stack spacing={2}>
-      <ToskaLogo />
-      <Introduction introText={introText} />
-      <Projects projects={projects} />
-      <Members />
-      <Footer />
-    </Stack>
-  </Container>
-);
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const sections = [
+    { key: "logo", title: null, component: <ToskaLogo /> },
+    {
+      key: "intro",
+      title: "Toska",
+      component: <Introduction introText={introText} />,
+    },
+    {
+      title: "Projektit",
+      component: <Projects projects={projects} />,
+    },
+    {
+      key: "members",
+      title: "Jäsenet",
+      component: <Members />,
+    },
+    {
+      key: "footer",
+      title: null,
+      component: <Footer />,
+    },
+  ];
+
+  return (
+    <>
+      <Head>
+        <title>Toska</title>
+      </Head>
+      <Stack>
+        {sections.map((section, index) => (
+          <Section
+            background={index % 2 === 0}
+            key={section.key}
+            title={section.title}
+          >
+            {section.component}
+          </Section>
+        ))}
+      </Stack>
+    </>
+  );
+};
 
 export default IndexPage;

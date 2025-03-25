@@ -2,11 +2,15 @@ import { createTheme, ThemeOptions } from "@mui/material/styles";
 
 const baseTheme = {
   palette: {
-    toskaYellow: "#e99939",
-    toskaRed: "#aa4137",
-    backgroundBlack: "#242124",
-    backgroundWhite: "#FEFEFA",
-    textGrey: "#6f6f6f",
+    mode: "dark",
+    primary: {
+      main: "#e99939",
+    },
+    secondary: {
+      main: "#aa4137",
+    },
+    backgroundDark1: "#242124",
+    backgroundDark2: "#202124",
   },
 } as const;
 

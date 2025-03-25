@@ -6,9 +6,6 @@ import {
   Image,
   Link as ChakraLink,
 } from "@chakra-ui/react";
-import toskaLogo from "assets/toskaLogo.svg";
-import Markdown from "components/Markdown";
-import Section from "components/Section";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -16,6 +13,10 @@ import Head from "next/head";
 import NextLink from "next/link";
 import { join } from "path";
 import { FaGithub } from "react-icons/fa";
+
+import toskaLogo from "assets/toskaLogo.svg";
+import { MarkdownContainer } from "components/MarkdownContainer";
+import { Section } from "components/Section";
 import { theme } from "utils/theme";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -112,7 +113,7 @@ const ProjectPage = ({
         <Box color={theme.textGrey} mb={4}>
           {date}
         </Box>
-        <Markdown value={content} />
+        <MarkdownContainer value={content} />
       </Box>
     </Section>
   </>
