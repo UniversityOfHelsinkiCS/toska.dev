@@ -1,14 +1,10 @@
 [
   {
-    "name": "mluukkai",
+    "name": "Matti",
     "gitHubName": "mluukkai",
     "joinedDate": {
-      "month": 1,
-      "year": 1970
-    },
-    "alumnDate": {
-      "month": 12,
-      "year": 2112
+      "month": 6,
+      "year": 2017
     }
   },
   {
@@ -249,10 +245,6 @@
     "alumnDate": {
       "month": 9,
       "year": 2022
-    },
-    "alumnDate": {
-      "month": 8,
-      "year": 2022
     }
   },
   {
@@ -443,7 +435,8 @@
     "alumnDate": {
       "month": 9,
       "year": 2024
-    }
+    },
+    "projects": ["oodikone"]
   },
   {
     "name": "Valtteri",
@@ -451,7 +444,8 @@
     "joinedDate": {
       "month": 9,
       "year": 2023
-    }
+    },
+    "projects": ["oodikone"]
   },
   {
     "name": "Riku",
@@ -460,7 +454,8 @@
     "joinedDate": {
       "month": 1,
       "year": 2024
-    }
+    },
+    "projects": ["oodikone"]
   },
   {
     "name": "Aleksandr",
@@ -469,7 +464,12 @@
     "joinedDate": {
       "month": 3,
       "year": 2024
-    }
+    },
+    "alumnDate": {
+      "month": 1,
+      "year": 2025
+    },
+    "projects": ["grapa"]
   },
   {
     "name": "Alexander",
@@ -487,7 +487,8 @@
     "joinedDate": {
       "month": 6,
       "year": 2024
-    }
+    },
+    "projects": ["lomake"]
   },
   {
     "name": "Venla",
@@ -496,7 +497,8 @@
     "joinedDate": {
       "month": 8,
       "year": 2024
-    }
+    },
+    "projects": ["lomake"]
   },
   {
     "name": "Santeri",
@@ -505,7 +507,8 @@
     "joinedDate": {
       "month": 1,
       "year": 2025
-    }
+    },
+    "projects": ["oodikone", "riksutin"]
   },
   {
     "name": "Ben",
@@ -514,7 +517,8 @@
     "joinedDate": {
       "month": 1,
       "year": 2025
-    }
+    },
+    "projects": ["lomake"]
   },
   {
     "name": "Joonas",
@@ -523,6 +527,7 @@
     "joinedDate": {
       "month": 1,
       "year": 2025
-    }
+    },
+    "projects": ["oodikone"]
   }
 ]

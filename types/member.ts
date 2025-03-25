@@ -6,4 +6,5 @@ export type Member = {
   linkedInName?: string;
   joinedDate: Date;
   alumnDate?: Date;
+  projects?: string[];
 };
