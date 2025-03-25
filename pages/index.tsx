@@ -11,7 +11,7 @@ import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import { ToskaLogo } from "components/ToskaLogo";
 import { Section } from "components/Section";
-import { Project } from "types/project";
+import { Project } from "types";
 
 export const getStaticProps = async () => {
   const introText = await require("../content/intro.md");

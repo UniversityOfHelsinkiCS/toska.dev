@@ -10,7 +10,7 @@ import NextLink from "next/link";
 import React, { useState, useEffect } from "react";
 
 import { MarkdownContainer } from "components/MarkdownContainer";
-import { Project } from "types/project";
+import { Project } from "types";
 import { theme } from "utils/theme";
 
 export const Projects = ({ projects }: { projects: Project[] }) => {
