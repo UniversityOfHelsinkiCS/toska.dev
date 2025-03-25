@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import fs from "fs";
 import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
@@ -6,11 +6,10 @@ import Head from "next/head";
 import { join } from "path";
 
 import { Footer } from "components/Footer";
+import { Introduction } from "components/Introduction";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
-import { Section } from "components/Section";
 import { ToskaLogo } from "components/ToskaLogo";
-import { Introduction } from "components/Introduction";
 
 export const getStaticProps = async () => {
   const introText = await require("../content/intro.md");
@@ -53,21 +52,13 @@ const IndexPage = ({
     <Head>
       <title>Toska</title>
     </Head>
-    <Section bg="WHITE">
+    <Stack spacing={2}>
       <ToskaLogo />
-    </Section>
-    <Section bg="WHITE">
       <Introduction introText={introText} />
-    </Section>
-    <Section bg="BLACK" header="Projektit">
       <Projects projects={projects} />
-    </Section>
-    <Section bg="WHITE" header="Jäsenet" wide>
       <Members />
-    </Section>
-    <Section bg="BLACK">
       <Footer />
-    </Section>
+    </Stack>
   </Container>
 );
 

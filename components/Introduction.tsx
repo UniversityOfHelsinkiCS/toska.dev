@@ -1,11 +1,10 @@
-import { Box } from "@chakra-ui/react";
-
 import Markdown from "components/Markdown";
+import { Section } from "components/Section";
 
 export const Introduction = ({ introText }: { introText: string }) => {
   return (
-    <Box mt={12}>
+    <Section title="Mikä Toska?">
       <Markdown value={introText} />
-    </Box>
+    </Section>
   );
 };

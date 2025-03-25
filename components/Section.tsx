@@ -1,45 +1,18 @@
-import { BoxProps, Container, Flex, Heading } from "@chakra-ui/react";
-import React from "react";
-import { theme } from "../utils/theme";
+import { Box, Paper, Typography } from "@mui/material";
 
-interface SectionProps {
-  bg: "BLACK" | "WHITE";
-  header?: string;
-  wide?: boolean;
-}
-
-export const Section: React.FC<SectionProps & BoxProps> = ({
-  bg,
-  header,
-  wide = false,
-  ...props
+export const Section = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title?: string;
 }) => {
   return (
-    <Flex
-      backgroundColor={
-        bg === "BLACK" ? theme.backgroundBlack : theme.backgroundWhite
-      }
-      color={bg === "BLACK" ? theme.backgroundWhite : theme.backgroundBlack}
-      py={20}
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      {...props}
-    >
-      <Container centerContent maxWidth={wide ? "120ch" : undefined}>
-        {header && (
-          <Heading
-            textTransform="uppercase"
-            mb={16}
-            pt={1}
-            borderTop="5px solid"
-            borderColor={bg === "BLACK" ? theme.toskaYellow : theme.toskaRed}
-          >
-            {header}
-          </Heading>
-        )}
-        {props.children}
-      </Container>
-    </Flex>
+    <Paper sx={{ padding: 2 }} variant="outlined">
+      <Typography component="h2" variant="h5">
+        {title}
+      </Typography>
+      <Box>{children}</Box>
+    </Paper>
   );
 };

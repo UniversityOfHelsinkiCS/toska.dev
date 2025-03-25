@@ -3,11 +3,12 @@ import { FaGamepad, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 import toskaMopo from "assets/toskaMopo.png";
+import { Section } from "components/Section";
 import { theme } from "utils/theme";
 
 export const Footer = () => {
   return (
-    <>
+    <Section>
       <Image src={toskaMopo.src} loading="lazy" w="4rem" mb="1rem" />
       <Flex color={theme.toskaYellow} fontSize="4rem">
         <a href="https://github.com/UniversityOfHelsinkiCS">
@@ -23,6 +24,6 @@ export const Footer = () => {
       <a href="https://paivinenjukka.work/" style={{ color: "#a5a5a5" }}>
         Toska-logon suunnitellut Jukka Päivinen
       </a>
-    </>
+    </Section>
   );
 };

@@ -1,8 +1,18 @@
-import { Badge, Box, Flex, Heading, Image, Link, useMediaQuery } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
-import { theme } from "utils/theme";
-import Markdown from "./Markdown";
 import React, { useState, useEffect } from "react";
+
+import Markdown from "components/Markdown";
+import { Section } from "components/Section";
+import { theme } from "utils/theme";
 
 export const Projects = ({
   projects,
@@ -16,16 +26,16 @@ export const Projects = ({
   }[];
 }) => {
   const [isDesktopWidth, setIsDesktopWidth] = useState(false);
-  const [minWidthMediaQuery] = useMediaQuery("(min-width: 800px)")
+  const [minWidthMediaQuery] = useMediaQuery("(min-width: 800px)");
 
   useEffect(() => {
-    if(minWidthMediaQuery !== isDesktopWidth){
+    if (minWidthMediaQuery !== isDesktopWidth) {
       setIsDesktopWidth(minWidthMediaQuery);
     }
-  }, [minWidthMediaQuery])
+  }, [minWidthMediaQuery]);
 
   return (
-    <>
+    <Section title="Projektit">
       {projects
         .sort((a, b) => {
           const aKey = a.key ?? 0;
@@ -38,7 +48,13 @@ export const Projects = ({
         .map((project, i) => {
           const isEven = i % 2 === 0;
           return (
-            <Flex key={project.name} justifyContent="space-evenly" align="center" my={12} direction={isDesktopWidth ? "row" : "column"}>
+            <Flex
+              key={project.name}
+              justifyContent="space-evenly"
+              align="center"
+              my={12}
+              direction={isDesktopWidth ? "row" : "column"}
+            >
               {(!isDesktopWidth || isEven) && (
                 <Image
                   objectFit="cover"
@@ -73,7 +89,7 @@ export const Projects = ({
                   </Link>
                 </NextLink>
               </Box>
-              {isDesktopWidth && !isEven &&  (
+              {isDesktopWidth && !isEven && (
                 <Image
                   objectFit="cover"
                   src={`/projects/${project.name}.png`}
@@ -85,6 +101,6 @@ export const Projects = ({
             </Flex>
           );
         })}
-    </>
+    </Section>
   );
 };
