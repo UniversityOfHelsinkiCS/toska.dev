@@ -470,11 +470,9 @@
       "month": 3,
       "year": 2024
     },
-    {
-      "alumnDate": {
-        "month": 1,
-        "year": 2025
-      }
+    "alumnDate": {
+      "month": 1,
+      "year": 2025
     }
   },
   {
