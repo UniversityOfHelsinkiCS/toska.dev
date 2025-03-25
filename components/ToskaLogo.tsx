@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-import toskaLogo from "assets/toskaLogo.svg";
+import toskaLogo from "assets/toska-logo.svg";
 
 export const ToskaLogo = () => {
   return (

@@ -29,15 +29,9 @@ export const getStaticProps = async () => {
           throw Error("Markdown file doesn't have correct gray matter");
         }
 
-        if (parsed.data.key && isNaN(Number(parsed.data.key))) {
-          throw Error("Key provided has to be a number");
-        }
-
         return {
           content: parsed.content,
           name: project,
-          key: parsed.data.key ? Number(parsed.data.key) : null,
-          tags: parsed.data.tags ? (parsed.data.tags as string) : null,
           title: parsed.data.title as string,
         } as Project;
       })
