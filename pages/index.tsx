@@ -1,4 +1,3 @@
-import { Box, Image, Tooltip } from "@chakra-ui/react";
 import { Container } from "@mui/material";
 import fs from "fs";
 import matter from "gray-matter";
@@ -6,13 +5,12 @@ import { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { join } from "path";
 
-import toskaLogo from "assets/toskaLogo.svg";
 import { Footer } from "components/Footer";
-import Markdown from "components/Markdown";
 import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import { Section } from "components/Section";
-import { theme } from "utils/theme";
+import { ToskaLogo } from "components/ToskaLogo";
+import { Introduction } from "components/Introduction";
 
 export const getStaticProps = async () => {
   const introText = await require("../content/intro.md");
@@ -51,23 +49,15 @@ const IndexPage = ({
   introText,
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <Container>
+  <Container maxWidth="lg">
     <Head>
       <title>Toska</title>
     </Head>
     <Section bg="WHITE">
-      <Tooltip label="Logon design Jukka Päivinen" placement="right">
-        <a href="https://paivinenjukka.work/">
-          <Image src={toskaLogo.src} width="24rem" />
-        </a>
-      </Tooltip>
-      <Box textAlign="center" letterSpacing={1} color={theme.textGrey}>
-        Helsingin yliopiston tietojenkäsittelytieteen osaston
-        sovelluskehitysakatemia
-      </Box>
-      <Box mt={12}>
-        <Markdown value={introText} />
-      </Box>
+      <ToskaLogo />
+    </Section>
+    <Section bg="WHITE">
+      <Introduction introText={introText} />
     </Section>
     <Section bg="BLACK" header="Projektit">
       <Projects projects={projects} />
