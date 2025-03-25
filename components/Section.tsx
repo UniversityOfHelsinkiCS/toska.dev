@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 
 export const Section = ({
   background,
@@ -16,16 +16,18 @@ export const Section = ({
           background
             ? theme.palette.backgroundDark1
             : theme.palette.backgroundDark2,
-        padding: 2,
+        py: 4,
       }}
     >
       <Container maxWidth="md">
-        {title && (
-          <Typography component="h2" variant="h5">
-            {title}
-          </Typography>
-        )}
-        <Box>{children}</Box>
+        <Stack gap={2}>
+          {title && (
+            <Typography component="h2" variant="h5">
+              {title}
+            </Typography>
+          )}
+          <Box>{children}</Box>
+        </Stack>
       </Container>
     </Box>
   );

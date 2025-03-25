@@ -11,19 +11,10 @@ import NextLink from "next/link";
 import React, { useState, useEffect } from "react";
 
 import { MarkdownContainer } from "components/MarkdownContainer";
+import { Project } from "types/project";
 import { theme } from "utils/theme";
 
-export const Projects = ({
-  projects,
-}: {
-  projects: {
-    title: string;
-    content: string;
-    name: string;
-    tags: string | null;
-    key: number | null;
-  }[];
-}) => {
+export const Projects = ({ projects }: { projects: Project[] }) => {
   const [isDesktopWidth, setIsDesktopWidth] = useState(false);
   const [minWidthMediaQuery] = useMediaQuery("(min-width: 800px)");
 

@@ -11,6 +11,7 @@ import { Members } from "components/Members";
 import { Projects } from "components/Projects";
 import { ToskaLogo } from "components/ToskaLogo";
 import { Section } from "components/Section";
+import { Project } from "types/project";
 
 export const getStaticProps = async () => {
   const introText = await require("../content/intro.md");
@@ -33,12 +34,12 @@ export const getStaticProps = async () => {
         }
 
         return {
-          title: parsed.data.title as string,
-          tags: parsed.data.tags ? (parsed.data.tags as string) : null,
-          key: parsed.data.key ? Number(parsed.data.key) : null,
           content: parsed.content,
           name: project,
-        };
+          key: parsed.data.key ? Number(parsed.data.key) : null,
+          tags: parsed.data.tags ? (parsed.data.tags as string) : null,
+          title: parsed.data.title as string,
+        } as Project;
       })
   );
 
