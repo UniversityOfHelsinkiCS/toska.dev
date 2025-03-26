@@ -3,7 +3,7 @@ import {
   GitHub as GitHubIcon,
   SportsEsports as SportsEsportsIcon,
 } from "@mui/icons-material";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,15 +35,20 @@ export const Footer = () => {
   return (
     <Stack alignItems="center" direction="row" justifyContent="space-between">
       <Box>
-        <Stack gap={1}>
-          {footerItems.map((item) => (
-            <ExternalLink
-              href={item.href}
-              icon={item.icon}
-              key={item.key}
-              text={item.name}
-            />
-          ))}
+        <Stack gap={3}>
+          <Stack gap={1}>
+            {footerItems.map((item) => (
+              <ExternalLink
+                href={item.href}
+                icon={item.icon}
+                key={item.key}
+                text={item.name}
+              />
+            ))}
+          </Stack>
+          <Typography color="text.secondary" variant="body2">
+            &copy; 2017-2025 Toska
+          </Typography>
         </Stack>
       </Box>
       <Link

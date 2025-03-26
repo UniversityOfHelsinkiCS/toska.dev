@@ -10,7 +10,7 @@ const baseTheme = {
       main: "#aa4137",
     },
     backgroundDark1: "#242124",
-    backgroundDark2: "#202124",
+    backgroundDark2: "#3d3d3f",
   },
 } as const;
 
