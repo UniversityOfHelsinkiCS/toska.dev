@@ -19,7 +19,11 @@ import { Project } from "types";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Card key={project.name} variant="outlined">
+    <Card
+      key={project.name}
+      sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+      variant="outlined"
+    >
       <CardMedia
         alt={`Screenshot of ${project.title}`}
         component="img"
@@ -27,7 +31,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         image={`/projects/${project.name}.png`}
         title={`Screenshot of ${project.title}`}
       />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography component="h3" gutterBottom variant="h5">
           {project.title}
         </Typography>

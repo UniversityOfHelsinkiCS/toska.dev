@@ -8,7 +8,7 @@ export const Projects = ({ projects }: { projects: Project[] }) => {
     <Grid container spacing={2}>
       {projects.map((project) => {
         return (
-          <Grid size={6}>
+          <Grid size={6} sx={{ display: "flex" }}>
             <ProjectCard project={project} />
           </Grid>
         );
