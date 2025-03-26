@@ -32,7 +32,12 @@ export const Footer = () => {
   ];
 
   return (
-    <Stack alignItems="center" direction="row" justifyContent="space-between">
+    <Stack
+      alignItems={{ xs: "start", sm: "center" }}
+      direction={{ xs: "column", sm: "row" }}
+      gap={5}
+      justifyContent="space-between"
+    >
       <Box>
         <Stack gap={3}>
           <Stack gap={1}>
@@ -57,19 +62,27 @@ export const Footer = () => {
           </Typography>
         </Stack>
       </Box>
-      <Link
-        href="https://www.helsinki.fi"
-        rel="noopener noreferrer"
-        target="_blank"
+      <Box
+        sx={{
+          justifyContent: { xs: "center", sm: "end" },
+          display: "flex",
+          width: { xs: "100%", sm: "auto" },
+        }}
       >
-        <Image
-          alt="Helsingin yliopiston logo"
-          height={1438 / 10}
-          src={universityLogo.src}
-          title="Helsingin yliopiston logo"
-          width={1358 / 10}
-        />
-      </Link>
+        <Link
+          href="https://www.helsinki.fi"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Image
+            alt="Helsingin yliopiston logo"
+            height={1438 / 10}
+            src={universityLogo.src}
+            title="Helsingin yliopiston logo"
+            width={1358 / 10}
+          />
+        </Link>
+      </Box>
     </Stack>
   );
 };
