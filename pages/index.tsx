@@ -2,12 +2,12 @@ import { Stack } from "@mui/material";
 import fs from "fs";
 import matter from "gray-matter";
 import { InferGetStaticPropsType } from "next";
-import Head from "next/head";
 import { join } from "path";
 
 import { Footer } from "components/Footer";
 import { Introduction } from "components/Introduction";
 import { Members } from "components/Members";
+import { PageHead } from "components/PageHead";
 import { Projects } from "components/Projects";
 import { ToskaLogo } from "components/ToskaLogo";
 import { Section } from "components/Section";
@@ -76,9 +76,7 @@ const IndexPage = ({
 
   return (
     <>
-      <Head>
-        <title>Toska</title>
-      </Head>
+      <PageHead title="Toska" />
       <Stack>
         {sections.map((section, index) => (
           <Section

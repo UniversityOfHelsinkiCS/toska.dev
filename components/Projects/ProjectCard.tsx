@@ -1,8 +1,4 @@
 import {
-  OpenInNew as OpenInNewIcon,
-  ReadMore as ReadMoreIcon,
-} from "@mui/icons-material";
-import {
   Button,
   Card,
   CardActions,
@@ -51,18 +47,12 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           justifyContent="space-between"
           sx={{ width: "100%" }}
         >
-          <NextLink href={`/projects/${project.name}`}>
-            <Button color="primary" endIcon={<ReadMoreIcon />}>
-              Lue lisää
-            </Button>
-          </NextLink>
           <Link
             href={`https://github.com/UniversityOfHelsinkiCS/${project.gitHub}`}
             rel="noopener noreferrer"
             target="_blank"
           >
             <Button
-              endIcon={<OpenInNewIcon />}
               sx={{
                 color: (theme) => theme.palette.secondary.light,
                 "&:hover": {
@@ -73,6 +63,9 @@ export const ProjectCard = ({ project }: { project: Project }) => {
               Näytä lähdekoodi
             </Button>
           </Link>
+          <NextLink href={`/projects/${project.name}`}>
+            <Button color="primary">Lue lisää</Button>
+          </NextLink>
         </Stack>
       </CardActions>
     </Card>

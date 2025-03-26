@@ -5,9 +5,9 @@ export const Section = ({
   children,
   title,
 }: {
-  background: boolean;
+  background?: boolean;
   children: React.ReactNode;
-  title: string | null;
+  title?: string | null;
 }) => {
   return (
     <Box

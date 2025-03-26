@@ -1,23 +1,16 @@
-import {
-  Badge,
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import NextLink from "next/link";
 import { join } from "path";
-import { FaGithub } from "react-icons/fa";
 
 import toskaLogo from "assets/toska-logo.svg";
 import { MarkdownContainer } from "components/MarkdownContainer";
 import { Section } from "components/Section";
-import { theme } from "utils/theme";
+import { Project } from "types";
+import { Link, Stack, Typography } from "@mui/material";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const projects = fs
@@ -30,16 +23,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-interface Props {
-  github: string;
-  title: string;
-  date: string;
-  content: string;
-  projectName: string;
-  tags: string;
-}
-
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<Project> = async ({ params }) => {
   if (!params || typeof params.name !== "string") {
     throw Error("No params provided");
   }
@@ -53,68 +37,42 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 
   return {
     props: {
-      github: parsed.data.github as string,
-      title: parsed.data.title as string,
-      tags: parsed.data.tags ? parsed.data.tags : null,
-      date: parsed.data.date as string,
       content: parsed.content,
-      projectName: params.name,
+      date: parsed.data.date as string,
+      gitHub: parsed.data.github as string,
+      name: params.name,
+      title: parsed.data.title as string,
     },
   };
 };
 
-const ProjectPage = ({
-  content,
-  github,
-  title,
-  date,
-  projectName,
-  tags,
-}: Props) => (
+const ProjectPage = ({ content, date, gitHub, name, title }: Project) => (
   <>
     <Head>
       <title>{`${title} - Projektit - Toska`}</title>
     </Head>
-    <Section bg="WHITE" p={4}>
+    <Section background>
       <NextLink href="/">
-        <a>
-          <Image src={toskaLogo.src} w="6rem" />
-        </a>
+        <Image alt="Toska logo" height={200} src={toskaLogo.src} width={300} />
       </NextLink>
     </Section>
-    <Section bg="BLACK" py={2}>
-      <Box m={4}>
+    <Section>
+      <Stack gap={2}>
         <Image
-          src={`/projects/${projectName}.png`}
-          objectFit="cover"
-          mx="auto"
+          alt="Screenshot of the project"
+          src={`/projects/${name}.png`}
+          height={100}
+          width={100}
         />
-        <Heading mt={6}>{title}</Heading>
-        {tags && (
-          <Box mt={1} mb={2}>
-            {tags.split(",").map((tag) => (
-              <Badge color={theme.toskaYellow} mr={2} key={tag}>
-                {tag}
-              </Badge>
-            ))}
-          </Box>
-        )}
-        <ChakraLink
-          color={theme.toskaRed}
-          href={`https://github.com/UniversityOfHelsinkiCS/${github}`}
-        >
-          <Flex alignItems="center">
-            <Box mr={1}>
-              <FaGithub />
-            </Box>
-            Github
-          </Flex>
-        </ChakraLink>
-        <Box color={theme.textGrey} mb={4}>
-          {date}
-        </Box>
+        <Typography component="h2" variant="h2">
+          {title}
+        </Typography>
+        <Link href={`https://github.com/UniversityOfHelsinkiCS/${gitHub}`}>
+          GitHub
+        </Link>
+        <Typography color="text.secondary">{date}</Typography>
         <MarkdownContainer value={content} />
-      </Box>
+      </Stack>
     </Section>
   </>
 );
