@@ -1,4 +1,7 @@
-import { OpenInNew as OpenInNewIcon } from "@mui/icons-material";
+import {
+  OpenInNew as OpenInNewIcon,
+  ReadMore as ReadMoreIcon,
+} from "@mui/icons-material";
 import {
   Button,
   Card,
@@ -6,6 +9,7 @@ import {
   CardContent,
   CardMedia,
   Link,
+  Stack,
   Typography,
 } from "@mui/material";
 import NextLink from "next/link";
@@ -30,26 +34,34 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         <MarkdownContainer value={project.content.split("\n")[1]} />
       </CardContent>
       <CardActions>
-        <NextLink href={`/projects/${project.name}`}>
-          <Button color="primary">Lue lisää</Button>
-        </NextLink>
-        <Link
-          href={`https://github.com/UniversityOfHelsinkiCS/${project.name}`}
-          rel="noopener noreferrer"
-          target="_blank"
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          sx={{ width: "100%" }}
         >
-          <Button
-            endIcon={<OpenInNewIcon />}
-            sx={{
-              color: (theme) => theme.palette.secondary.light,
-              "&:hover": {
-                color: (theme) => theme.palette.secondary.main,
-              },
-            }}
+          <NextLink href={`/projects/${project.name}`}>
+            <Button color="primary" endIcon={<ReadMoreIcon />}>
+              Lue lisää
+            </Button>
+          </NextLink>
+          <Link
+            href={`https://github.com/UniversityOfHelsinkiCS/${project.gitHub}`}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            Lähdekoodi
-          </Button>
-        </Link>
+            <Button
+              endIcon={<OpenInNewIcon />}
+              sx={{
+                color: (theme) => theme.palette.secondary.light,
+                "&:hover": {
+                  color: (theme) => theme.palette.secondary.main,
+                },
+              }}
+            >
+              Näytä lähdekoodi
+            </Button>
+          </Link>
+        </Stack>
       </CardActions>
     </Card>
   );
