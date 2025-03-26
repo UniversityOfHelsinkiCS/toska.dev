@@ -1,18 +1,20 @@
-import { Chip } from "@mui/material";
+import { Chip, Tooltip } from "@mui/material";
 
-const getMemberNumber = (index: number) => {
-  if (index < 10) {
-    return `#0${index}`;
+const formatMemberNumber = (memberNumber: number) => {
+  if (memberNumber < 10) {
+    return `#0${memberNumber}`;
   }
-  return `#${index}`;
+  return `#${memberNumber}`;
 };
 
-export const NumberChip = ({ index }: { index: number }) => {
+export const NumberChip = ({ memberNumber }: { memberNumber: number }) => {
   return (
-    <Chip
-      label={getMemberNumber(index)}
-      size="small"
-      sx={{ color: (theme) => theme.palette.primary.main }}
-    />
+    <Tooltip arrow placement="top" title="Jäsennumero">
+      <Chip
+        label={formatMemberNumber(memberNumber)}
+        size="small"
+        sx={{ color: (theme) => theme.palette.primary.main }}
+      />
+    </Tooltip>
   );
 };

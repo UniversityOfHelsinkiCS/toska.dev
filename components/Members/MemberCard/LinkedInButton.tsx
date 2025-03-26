@@ -7,7 +7,12 @@ export const LinkedInButton = ({ linkedInName }: { linkedInName?: string }) => {
   }
 
   return (
-    <Link color="#007ab6" href={`https://www.linkedin.com/in/${linkedInName}/`}>
+    <Link
+      color="#007ab6"
+      href={`https://www.linkedin.com/in/${linkedInName}/`}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
       <LinkedInIcon fontSize="small" />
     </Link>
   );

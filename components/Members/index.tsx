@@ -2,11 +2,22 @@ import { Box, Grid2 as Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 import members from "content/members.json";
+import { Member } from "types";
 import { MemberCard } from "./MemberCard";
 
 export const Members = () => {
-  const activeMembers = members.filter((member) => !member.alumnDate);
-  const alumniMembers = members.filter((member) => member.alumnDate);
+  const membersWithMemberNumbers: Member[] = members.map((member, index) => ({
+    ...member,
+    memberNumber: index,
+  }));
+
+  const activeMembers = membersWithMemberNumbers.filter(
+    (member) => !member.alumnDate
+  );
+
+  const alumniMembers = membersWithMemberNumbers.filter(
+    (member) => member.alumnDate
+  );
 
   return (
     <Stack gap={1}>
@@ -15,9 +26,9 @@ export const Members = () => {
           Nykyiset jäsenet
         </Typography>
         <Grid container spacing={1}>
-          {activeMembers.map((member, index) => (
+          {activeMembers.map((member) => (
             <Grid key={member.gitHubName} size={3}>
-              <MemberCard index={index} member={member} />
+              <MemberCard member={member} />
             </Grid>
           ))}
         </Grid>
@@ -27,9 +38,9 @@ export const Members = () => {
           Alumni
         </Typography>
         <Grid container spacing={1}>
-          {alumniMembers.map((member, index) => (
+          {alumniMembers.map((member) => (
             <Grid key={member.gitHubName} size={3}>
-              <MemberCard index={index} member={member} />
+              <MemberCard member={member} />
             </Grid>
           ))}
         </Grid>

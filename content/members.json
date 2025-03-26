@@ -32,7 +32,7 @@
     }
   },
   {
-    "name": "mikko",
+    "name": "Mikko",
     "gitHubName": "mahtis",
     "joinedDate": {
       "month": 12,
@@ -477,6 +477,10 @@
     "linkedInName": "alexander-engelhardt-8940072b0",
     "joinedDate": {
       "month": 3,
+      "year": 2024
+    },
+    "alumnDate": {
+      "month": 8,
       "year": 2024
     }
   },

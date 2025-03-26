@@ -3,18 +3,12 @@ import React from "react";
 
 import { Member } from "types";
 import { formatDate } from "utils/date";
-import { ProfilePicture } from "./ProfilePicture";
-import { NumberChip } from "./NumberChip";
-import { LinkedInButton } from "./LinkedInButton";
 import { GitHubButton } from "./GitHubButton";
+import { LinkedInButton } from "./LinkedInButton";
+import { NumberChip } from "./NumberChip";
+import { ProfilePicture } from "./ProfilePicture";
 
-export const MemberCard = ({
-  index,
-  member,
-}: {
-  index: number;
-  member: Member;
-}) => {
+export const MemberCard = ({ member }: { member: Member }) => {
   return (
     <Card variant="outlined">
       <CardContent>
@@ -26,7 +20,7 @@ export const MemberCard = ({
             justifyContent="space-between"
           >
             <Typography>{member.name}</Typography>
-            <NumberChip index={index} />
+            <NumberChip memberNumber={member.memberNumber!} />
           </Stack>
           <Stack
             alignItems="center"
