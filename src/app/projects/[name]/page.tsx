@@ -1,17 +1,27 @@
-import { notFound } from "next/navigation";
+import { Stack, Typography } from "@mui/material";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getProjectByName } from "@/lib/projects";
+import { notFound } from "next/navigation";
+
 import toskaLogo from "@/assets/toska-logo.svg";
 import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { Section } from "@/components/Section";
-import { Stack, Typography } from "@mui/material";
+import { getProjectByName } from "@/lib/projects";
 
-export default async function ProjectPage({
-  params,
-}: {
+type Props = {
   params: { name: string };
-}) {
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { name } = params;
+
+  return {
+    title: name,
+  };
+}
+
+export default async function ProjectPage({ params }: Props) {
   const project = await getProjectByName(params.name);
 
   if (!project) {
