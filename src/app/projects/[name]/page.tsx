@@ -8,20 +8,23 @@ import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { Section } from "@/components/Section";
 import { getProjectByName } from "@/lib/projects";
 
-type Props = {
-  params: { name: string };
-};
+type Props = Promise<{ name: string }>;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { name } = params;
+export async function generateMetadata({
+  params,
+}: {
+  params: Props;
+}): Promise<Metadata> {
+  const { name } = await params;
 
   return {
     title: name,
   };
 }
 
-export default async function ProjectPage({ params }: Props) {
-  const project = await getProjectByName(params.name);
+export default async function ProjectPage({ params }: { params: Props }) {
+  const { name } = await params;
+  const project = await getProjectByName(name);
 
   if (!project) {
     return notFound();
