@@ -2,6 +2,7 @@ import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 
 import { Footer } from "@/components/Footer";
+import { TopBar } from "@/components/TopBar";
 import { theme } from "@/utils/theme";
 
 export default function RootLayout({
@@ -14,6 +15,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <TopBar />
           {children}
           <Footer />
         </ThemeProvider>
