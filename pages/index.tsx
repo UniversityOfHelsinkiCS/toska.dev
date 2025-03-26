@@ -45,13 +45,18 @@ const IndexPage = ({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const sections = [
-    { key: "logo", title: null, component: <ToskaLogo /> },
     {
-      key: "intro",
+      key: "logo",
+      title: null,
+      component: <ToskaLogo />,
+    },
+    {
+      key: "introduction",
       title: "Toska",
       component: <Introduction introText={introText} />,
     },
     {
+      key: "projects",
       title: "Projektit",
       component: <Projects projects={projects} />,
     },
@@ -65,7 +70,7 @@ const IndexPage = ({
       title: null,
       component: <Footer />,
     },
-  ];
+  ] as const;
 
   return (
     <>

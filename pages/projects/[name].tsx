@@ -14,7 +14,7 @@ import NextLink from "next/link";
 import { join } from "path";
 import { FaGithub } from "react-icons/fa";
 
-import toskaLogo from "assets/toskaLogo.svg";
+import toskaLogo from "assets/toska-logo.svg";
 import { MarkdownContainer } from "components/MarkdownContainer";
 import { Section } from "components/Section";
 import { theme } from "utils/theme";
