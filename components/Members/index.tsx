@@ -1,9 +1,9 @@
-import { Box, Grid2 as Grid, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 
 import members from "content/members.json";
 import { Member } from "types";
-import { MemberCard } from "./MemberCard";
+import { MemberGrid } from "./MemberGrid";
 
 export const Members = () => {
   const membersWithMemberNumbers: Member[] = members
@@ -27,25 +27,13 @@ export const Members = () => {
         <Typography component="h3" gutterBottom variant="h6">
           Nykyiset jäsenet
         </Typography>
-        <Grid container spacing={1}>
-          {activeMembers.map((member) => (
-            <Grid key={member.gitHubName} size={3}>
-              <MemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
+        <MemberGrid members={activeMembers} />
       </Box>
       <Box>
         <Typography component="h3" gutterBottom variant="h6">
           Alumni
         </Typography>
-        <Grid container spacing={1}>
-          {alumniMembers.map((member) => (
-            <Grid key={member.gitHubName} size={3}>
-              <MemberCard member={member} />
-            </Grid>
-          ))}
-        </Grid>
+        <MemberGrid members={alumniMembers} />
       </Box>
     </Stack>
   );
