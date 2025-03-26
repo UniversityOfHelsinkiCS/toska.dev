@@ -1,11 +1,10 @@
 import {
   Email as EmailIcon,
   GitHub as GitHubIcon,
-  SportsEsports as SportsEsportsIcon,
+  Palette as PaletteIcon,
 } from "@mui/icons-material";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
 
 import universityLogo from "assets/hy-logo.png";
 import { ExternalLink } from "./ExternalLink";
@@ -25,10 +24,10 @@ export const Footer = () => {
       icon: <GitHubIcon fontSize="small" />,
     },
     {
-      key: "doom",
-      name: "Doom",
-      href: "https://doom.toska.dev",
-      icon: <SportsEsportsIcon fontSize="small" />,
+      key: "logo-credit",
+      name: "Logon suunnittelu: Jukka Päivinen",
+      href: "https://www.jukkapaivinen.com",
+      icon: <PaletteIcon fontSize="small" />,
     },
   ];
 
@@ -47,7 +46,14 @@ export const Footer = () => {
             ))}
           </Stack>
           <Typography color="text.secondary" variant="body2">
-            &copy; 2017-2025 Toska
+            <Link
+              color="inherit"
+              href="https://doom.toska.dev"
+              underline="none"
+            >
+              &copy;
+            </Link>{" "}
+            2017–2025 Toska
           </Typography>
         </Stack>
       </Box>
