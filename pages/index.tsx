@@ -31,6 +31,7 @@ export const getStaticProps = async () => {
 
         return {
           content: parsed.content,
+          date: parsed.data.date as string,
           gitHub: parsed.data.github as string,
           name: project,
           title: parsed.data.title as string,

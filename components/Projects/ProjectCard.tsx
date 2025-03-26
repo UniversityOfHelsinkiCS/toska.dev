@@ -8,6 +8,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Divider,
   Link,
   Stack,
   Typography,
@@ -31,12 +32,19 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         image={`/projects/${project.name}.png`}
         title={`Screenshot of ${project.title}`}
       />
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Typography component="h3" gutterBottom variant="h5">
+      <CardContent>
+        <Typography component="h3" variant="h6">
           {project.title}
         </Typography>
+        <Typography color="text.secondary" variant="subtitle2">
+          {project.date}
+        </Typography>
+      </CardContent>
+      <Divider />
+      <CardContent sx={{ flexGrow: 1 }}>
         <MarkdownContainer value={project.content.split("\n")[1]} />
       </CardContent>
+      <Divider />
       <CardActions>
         <Stack
           direction="row"
