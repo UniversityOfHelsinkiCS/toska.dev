@@ -2,6 +2,6 @@
 
 import { MarkdownContainer } from "src/components/MarkdownContainer";
 
-export const Introduction = ({ introText }: { introText: string }) => {
+export const AboutUs = ({ introText }: { introText: string }) => {
   return <MarkdownContainer value={introText} />;
 };

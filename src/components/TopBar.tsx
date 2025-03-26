@@ -1,15 +1,14 @@
-"use client";
+import { AppBar, Button, Box, Container, Toolbar } from "@mui/material";
+import Image from "next/image";
 
-import {
-  AppBar,
-  Button,
-  Box,
-  Container,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import toskaLogo from "@/assets/toska-logo.svg";
+import Link from "next/link";
 
-const navItems = ["Toska", "Projektit", "Jäsenet"];
+const navItems = [
+  { key: "about-us", href: "#meista", text: "Meistä" },
+  { key: "projects", href: "#projektit", text: "Projektit" },
+  { key: "members", href: "#jasenet", text: "Jäsenet" },
+];
 
 export const TopBar = () => {
   return (
@@ -17,12 +16,22 @@ export const TopBar = () => {
       <AppBar component="nav">
         <Container maxWidth="md">
           <Toolbar disableGutters>
-            <Typography component="div" sx={{ flexGrow: 1 }} variant="h6">
-              Toska
-            </Typography>
+            <Box sx={{ flexGrow: 1 }}>
+              <Link href="/">
+                <Image
+                  alt="Toska"
+                  src={toskaLogo}
+                  height={50}
+                  width={50}
+                  priority
+                />
+              </Link>
+            </Box>
             <Box>
               {navItems.map((item) => (
-                <Button key={item}>{item}</Button>
+                <Link href={item.href}>
+                  <Button key={item.key}>{item.text}</Button>
+                </Link>
               ))}
             </Box>
           </Toolbar>
