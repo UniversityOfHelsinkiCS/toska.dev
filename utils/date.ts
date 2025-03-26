@@ -7,16 +7,6 @@ const formatMonth = (month: number) => {
   return `${month}`;
 };
 
-export const formatDate = (joinedDate?: Date, alumnDate?: Date) => {
-  if (!joinedDate) {
-    return "";
-  }
-
-  if (!alumnDate) {
-    return `${formatMonth(joinedDate.month)}/${joinedDate.year}`;
-  }
-
-  return `${formatMonth(joinedDate.month)}/${joinedDate.year} - ${formatMonth(
-    alumnDate.month
-  )}/${alumnDate.year}`;
+export const formatDate = (date: Date) => {
+  return `${formatMonth(date.month)}/${date.year}`;
 };

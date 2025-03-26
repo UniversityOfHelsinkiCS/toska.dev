@@ -5,7 +5,7 @@ export type Member = {
   gitHubName: string;
   linkedInName?: string;
   memberNumber?: number;
-  joinedDate: Date;
-  alumnDate?: Date;
+  joinDate: Date;
+  exitDate?: Date;
   projects?: string[];
 };

@@ -2,7 +2,7 @@
   {
     "name": "Matti",
     "gitHubName": "mluukkai",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2017
     }
@@ -10,11 +10,11 @@
   {
     "name": "Jami",
     "gitHubName": "jakousa",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2018
     }
@@ -22,11 +22,11 @@
   {
     "name": "Tuomo",
     "gitHubName": "totutotu",
-    "joinedDate": {
+    "joinDate": {
       "month": 9,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2019
     }
@@ -34,11 +34,11 @@
   {
     "name": "Mikko",
     "gitHubName": "mahtis",
-    "joinedDate": {
+    "joinDate": {
       "month": 12,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2018
     }
@@ -46,11 +46,11 @@
   {
     "name": "Terho",
     "gitHubName": "qzuw",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2019
     }
@@ -58,11 +58,11 @@
   {
     "name": "Sasu",
     "gitHubName": "sasumaki",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 7,
       "year": 2019
     }
@@ -70,11 +70,11 @@
   {
     "name": "Ilkka",
     "gitHubName": "ikuisma",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2019
     }
@@ -82,11 +82,11 @@
   {
     "name": "Rimi",
     "gitHubName": "Rochet2",
-    "joinedDate": {
+    "joinDate": {
       "month": 12,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2019
     }
@@ -94,11 +94,11 @@
   {
     "name": "Esa",
     "gitHubName": "esakemp",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2020
     }
@@ -106,11 +106,11 @@
   {
     "name": "Jere",
     "gitHubName": "xneme",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2020
     }
@@ -118,11 +118,11 @@
   {
     "name": "Tero",
     "gitHubName": "granigan",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2020
     }
@@ -130,11 +130,11 @@
   {
     "name": "Olli",
     "gitHubName": "woltsu",
-    "joinedDate": {
+    "joinDate": {
       "month": 7,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 6,
       "year": 2020
     }
@@ -142,11 +142,11 @@
   {
     "name": "Joona",
     "gitHubName": "cxcorp",
-    "joinedDate": {
+    "joinDate": {
       "month": 9,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2020
     }
@@ -154,11 +154,11 @@
   {
     "name": "Marko",
     "gitHubName": "markokoskinen2037",
-    "joinedDate": {
+    "joinDate": {
       "month": 11,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 2,
       "year": 2021
     }
@@ -166,11 +166,11 @@
   {
     "name": "Atte",
     "gitHubName": "ajhaa",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2021
     }
@@ -178,11 +178,11 @@
   {
     "name": "Gert",
     "gitHubName": "darake",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2021
     }
@@ -190,11 +190,11 @@
   {
     "name": "Kalle",
     "gitHubName": "Sendouc",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2021
     }
@@ -202,11 +202,11 @@
   {
     "name": "Kalle",
     "gitHubName": "kaltsoon",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2022
     }
@@ -214,11 +214,11 @@
   {
     "name": "Basse",
     "gitHubName": "joonashak",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2021
     }
@@ -226,11 +226,11 @@
   {
     "name": "Saara",
     "gitHubName": "saarasat",
-    "joinedDate": {
+    "joinDate": {
       "month": 9,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2022
     }
@@ -238,11 +238,11 @@
   {
     "name": "Roni",
     "gitHubName": "vaahtokarkki",
-    "joinedDate": {
+    "joinDate": {
       "month": 9,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2022
     }
@@ -250,11 +250,11 @@
   {
     "name": "Otto",
     "gitHubName": "otahontas",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2022
     }
@@ -262,11 +262,11 @@
   {
     "name": "Ilmari",
     "gitHubName": "ilmarikyl",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2022
     }
@@ -274,11 +274,11 @@
   {
     "name": "Leo",
     "gitHubName": "LeoVaris",
-    "joinedDate": {
+    "joinDate": {
       "month": 4,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2022
     }
@@ -286,11 +286,11 @@
   {
     "name": "Olli",
     "gitHubName": "ollikehy",
-    "joinedDate": {
+    "joinDate": {
       "month": 4,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2022
     }
@@ -298,11 +298,11 @@
   {
     "name": "Petri",
     "gitHubName": "Petrimus",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2022
     }
@@ -310,11 +310,11 @@
   {
     "name": "Mitja",
     "gitHubName": "dogamak",
-    "joinedDate": {
+    "joinDate": {
       "month": 10,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2022
     }
@@ -322,11 +322,11 @@
   {
     "name": "Sami",
     "gitHubName": "SNurmivaara",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2022
     }
@@ -334,11 +334,11 @@
   {
     "name": "Valtteri",
     "gitHubName": "nettivastaava",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2022
     }
@@ -347,7 +347,7 @@
     "name": "Veikko",
     "gitHubName": "Veikkosuhonen",
     "linkedInName": "veikko-suhonen-394751230",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2022
     }
@@ -356,11 +356,11 @@
     "name": "Miko",
     "gitHubName": "Keskimaki",
     "linkedInName": "keskimaki",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2024
     }
@@ -368,11 +368,11 @@
   {
     "name": "Laura",
     "gitHubName": "sinikala",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2023
     }
@@ -380,11 +380,11 @@
   {
     "name": "Outi",
     "gitHubName": "outisa",
-    "joinedDate": {
+    "joinDate": {
       "month": 8,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 7,
       "year": 2023
     }
@@ -392,11 +392,11 @@
   {
     "name": "Pekka",
     "gitHubName": "iPegii",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2024
     }
@@ -404,11 +404,11 @@
   {
     "name": "Henri",
     "gitHubName": "HRemonen",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2025
     }
@@ -416,11 +416,11 @@
   {
     "name": "Erika",
     "gitHubName": "erikao1998",
-    "joinedDate": {
+    "joinDate": {
       "month": 4,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2024
     }
@@ -428,11 +428,11 @@
   {
     "name": "Arttu",
     "gitHubName": "ShootingStar91",
-    "joinedDate": {
+    "joinDate": {
       "month": 4,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2024
     },
@@ -441,7 +441,7 @@
   {
     "name": "Valtteri",
     "gitHubName": "valtterikantanen",
-    "joinedDate": {
+    "joinDate": {
       "month": 9,
       "year": 2023
     },
@@ -451,7 +451,7 @@
     "name": "Riku",
     "gitHubName": "rikurauhala",
     "linkedInName": "rikurauhala",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2024
     },
@@ -461,11 +461,11 @@
     "name": "Aleksandr",
     "gitHubName": "AleksTeresh",
     "linkedInName": "aleksandr-tereshchenko",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2024
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2025
     },
@@ -475,11 +475,11 @@
     "name": "Alexander",
     "gitHubName": "alwengel",
     "linkedInName": "alexander-engelhardt-8940072b0",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2024
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2024
     }
@@ -488,7 +488,7 @@
     "name": "Tuomas",
     "gitHubName": "tfhuhtal",
     "linkedInName": "tuomas-huhtala-7409b6239",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2024
     },
@@ -498,7 +498,7 @@
     "name": "Venla",
     "gitHubName": "ranven",
     "linkedInName": "venla-rantanen",
-    "joinedDate": {
+    "joinDate": {
       "month": 8,
       "year": 2024
     },
@@ -508,7 +508,7 @@
     "name": "Santeri",
     "gitHubName": "santeri0200",
     "linkedInName": "santeri0200",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     },
@@ -518,7 +518,7 @@
     "name": "Ben",
     "gitHubName": "sutigit",
     "linkedInName": "ben-panyanil",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     },
@@ -528,7 +528,7 @@
     "name": "Joonas",
     "gitHubName": "joonas-a",
     "linkedInName": "joonasahovalli",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     },

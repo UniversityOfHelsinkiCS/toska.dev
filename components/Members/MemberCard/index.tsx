@@ -1,8 +1,7 @@
 import { Card, CardContent, Stack, Typography } from "@mui/material";
-import React from "react";
 
 import { Member } from "types";
-import { formatDate } from "utils/date";
+import { DateText } from "./DateText";
 import { GitHubButton } from "./GitHubButton";
 import { LinkedInButton } from "./LinkedInButton";
 import { NumberChip } from "./NumberChip";
@@ -27,9 +26,12 @@ export const MemberCard = ({ member }: { member: Member }) => {
             direction="row"
             justifyContent="space-between"
           >
-            <Typography color="text.secondary" variant="body2">
-              {formatDate(member.joinedDate, member.alumnDate)}
-            </Typography>
+            <Stack direction="column" spacing={1}>
+              <DateText date={member.joinDate} mode="join" />
+              {member.exitDate && (
+                <DateText date={member.exitDate} mode="exit" />
+              )}
+            </Stack>
             <Stack direction="row" spacing={1}>
               <LinkedInButton linkedInName={member.linkedInName} />
               <GitHubButton gitHubName={member.gitHubName} />

@@ -6,17 +6,19 @@ import { Member } from "types";
 import { MemberCard } from "./MemberCard";
 
 export const Members = () => {
-  const membersWithMemberNumbers: Member[] = members.map((member, index) => ({
-    ...member,
-    memberNumber: index,
-  }));
+  const membersWithMemberNumbers: Member[] = members
+    .map((member, index) => ({
+      ...member,
+      memberNumber: index,
+    }))
+    .sort((a, b) => a.memberNumber - b.memberNumber);
 
   const activeMembers = membersWithMemberNumbers.filter(
-    (member) => !member.alumnDate
+    (member) => !member.exitDate
   );
 
   const alumniMembers = membersWithMemberNumbers.filter(
-    (member) => member.alumnDate
+    (member) => member.exitDate
   );
 
   return (
