@@ -30,7 +30,6 @@ export default async function IndexPage() {
       component: <Projects projects={projects} />,
     },
     { key: "members", title: "Jäsenet", component: <Members /> },
-    { key: "footer", title: null, component: <Footer /> },
   ] as const;
 
   return (
