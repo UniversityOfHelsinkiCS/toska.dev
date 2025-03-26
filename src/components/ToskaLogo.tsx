@@ -3,15 +3,13 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-import toskaLogo from "@/assets/toska-logo.svg";
-
 export const ToskaLogo = () => {
   return (
     <Box alignItems="center" display="flex" flexDirection="column">
       <Image
         alt="Toska logo"
         height={200}
-        src={toskaLogo.src}
+        src="./assets/toska-logo.svg"
         title="Toska logo, design by Jukka Päivinen"
         width={300}
       />

@@ -10,7 +10,7 @@ export const Section = ({
 }: {
   background?: boolean;
   children: React.ReactNode;
-  id: string;
+  id?: string;
   title?: string | null;
 }) => {
   return (

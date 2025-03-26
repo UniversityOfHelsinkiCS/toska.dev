@@ -1,7 +1,5 @@
 import { AppBar, Button, Box, Container, Toolbar } from "@mui/material";
 import Image from "next/image";
-
-import toskaLogo from "@/assets/toska-logo.svg";
 import Link from "next/link";
 
 const navItems = [
@@ -20,7 +18,7 @@ export const TopBar = () => {
               <Link href="/">
                 <Image
                   alt="Toska"
-                  src={toskaLogo}
+                  src="./assets/toska-logo.svg"
                   height={50}
                   width={50}
                   priority
@@ -29,8 +27,8 @@ export const TopBar = () => {
             </Box>
             <Box>
               {navItems.map((item) => (
-                <Link href={item.href}>
-                  <Button key={item.key}>{item.text}</Button>
+                <Link href={item.href} key={item.key}>
+                  <Button>{item.text}</Button>
                 </Link>
               ))}
             </Box>
