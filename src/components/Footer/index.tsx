@@ -9,6 +9,7 @@ import { Box, Link, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
 import { Section } from "@/components/Section";
+import universityLogo from "public/assets/hy-logo.png";
 import { ExternalLink } from "./ExternalLink";
 
 export const Footer = async () => {
@@ -80,7 +81,8 @@ export const Footer = async () => {
             <Image
               alt="Helsingin yliopiston logo"
               height={1438 / 10}
-              src="/assets/hy-logo.png"
+              priority
+              src={universityLogo}
               title="Helsingin yliopiston logo"
               width={1358 / 10}
             />
