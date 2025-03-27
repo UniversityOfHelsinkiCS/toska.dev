@@ -24,7 +24,7 @@ export async function generateMetadata({
   };
 }
 
-export const ProjectPage = async ({ params }: { params: Props }) => {
+export default async function ProjectPage({ params }: { params: Props }) {
   const { name } = await params;
   const project = await getProjectByName(name);
 
@@ -59,6 +59,4 @@ export const ProjectPage = async ({ params }: { params: Props }) => {
       </Stack>
     </Container>
   );
-};
-
-export default ProjectPage;
+}
