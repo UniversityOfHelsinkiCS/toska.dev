@@ -435,8 +435,7 @@
     "exitDate": {
       "month": 9,
       "year": 2024
-    },
-    "projects": ["oodikone"]
+    }
   },
   {
     "name": "Valtteri",
@@ -444,8 +443,7 @@
     "joinDate": {
       "month": 9,
       "year": 2023
-    },
-    "projects": ["oodikone"]
+    }
   },
   {
     "name": "Riku",
@@ -454,8 +452,7 @@
     "joinDate": {
       "month": 1,
       "year": 2024
-    },
-    "projects": ["oodikone"]
+    }
   },
   {
     "name": "Aleksandr",
@@ -468,8 +465,7 @@
     "exitDate": {
       "month": 1,
       "year": 2025
-    },
-    "projects": ["grapa"]
+    }
   },
   {
     "name": "Alexander",
@@ -491,8 +487,7 @@
     "joinDate": {
       "month": 6,
       "year": 2024
-    },
-    "projects": ["lomake"]
+    }
   },
   {
     "name": "Venla",
@@ -501,8 +496,7 @@
     "joinDate": {
       "month": 8,
       "year": 2024
-    },
-    "projects": ["lomake"]
+    }
   },
   {
     "name": "Santeri",
@@ -511,8 +505,7 @@
     "joinDate": {
       "month": 1,
       "year": 2025
-    },
-    "projects": ["oodikone", "riksutin"]
+    }
   },
   {
     "name": "Ben",
@@ -521,8 +514,7 @@
     "joinDate": {
       "month": 1,
       "year": 2025
-    },
-    "projects": ["lomake"]
+    }
   },
   {
     "name": "Joonas",
@@ -531,7 +523,6 @@
     "joinDate": {
       "month": 1,
       "year": 2025
-    },
-    "projects": ["oodikone"]
+    }
   }
 ]
