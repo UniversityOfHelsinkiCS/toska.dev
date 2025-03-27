@@ -24,11 +24,10 @@ export const ProjectCard = ({ project }: { project: Project }) => {
       variant="outlined"
     >
       <CardMedia
-        alt={`Screenshot of ${project.title}`}
+        alt={`Kuvakaappaus projektista ${project.title}`}
         component="img"
         height={200}
         image={`/projects/${project.name}.png`}
-        title={`Screenshot of ${project.title}`}
       />
       <CardContent>
         <Typography component="h3" variant="h6">

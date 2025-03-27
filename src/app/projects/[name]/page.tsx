@@ -1,11 +1,10 @@
-import { Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { MarkdownContainer } from "@/components/MarkdownContainer";
-import { Section } from "@/components/Section";
 import { getProjectByName } from "@/lib/projects";
 
 type Props = Promise<{ name: string }>;
@@ -22,7 +21,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({ params }: { params: Props }) {
+export const ProjectPage = async ({ params }: { params: Props }) => {
   const { name } = await params;
   const project = await getProjectByName(name);
 
@@ -31,10 +30,10 @@ export default async function ProjectPage({ params }: { params: Props }) {
   }
 
   return (
-    <Section>
+    <Container maxWidth="md">
       <Stack gap={2}>
         <Image
-          alt={`Screenshot of ${project.name}`}
+          alt={`Kuvakaappaus sovelluksesta ${project.name}`}
           src={`/projects/${project.name}.png`}
           height={100}
           width={100}
@@ -51,6 +50,8 @@ export default async function ProjectPage({ params }: { params: Props }) {
         <Typography color="text.secondary">{project.date}</Typography>
         <MarkdownContainer value={project.content} />
       </Stack>
-    </Section>
+    </Container>
   );
-}
+};
+
+export default ProjectPage;
