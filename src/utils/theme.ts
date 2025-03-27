@@ -3,6 +3,9 @@
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 
 const baseTheme = {
+  typography: {
+    fontFamily: "var(--font-lato)",
+  },
   palette: {
     mode: "dark",
     primary: {
@@ -10,6 +13,9 @@ const baseTheme = {
     },
     secondary: {
       main: "#aa4137",
+    },
+    background: {
+      default: "#3d3d3f",
     },
     backgroundDark1: "#242124",
     backgroundDark2: "#3d3d3f",

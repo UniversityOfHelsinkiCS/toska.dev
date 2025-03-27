@@ -1,9 +1,18 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { Lato } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { TopBar } from "@/components/TopBar";
 import { theme } from "@/utils/theme";
+
+const lato = Lato({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lato",
+});
 
 export default function RootLayout({
   children,
@@ -11,16 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={lato.variable}>
       <body
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <TopBar />
-          <main style={{ flex: 1, overflowY: "auto" }}>{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <TopBar />
+            <main style={{ flex: 1, overflowY: "auto" }}>{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
