@@ -1,526 +1,526 @@
 [
   {
-    "name": "mluukkai",
-    "githubName": "mluukkai",
-    "joinedDate": {
-      "month": 1,
-      "year": 1970
-    },
-    "alumnDate": {
-      "month": 12,
-      "year": 2112
+    "name": "Matti",
+    "gitHubName": "mluukkai",
+    "joinDate": {
+      "month": 6,
+      "year": 2017
     }
   },
   {
     "name": "Jami",
-    "githubName": "jakousa",
-    "joinedDate": {
+    "gitHubName": "jakousa",
+    "joinDate": {
       "month": 6,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2018
     }
   },
   {
     "name": "Tuomo",
-    "githubName": "totutotu",
-    "joinedDate": {
+    "gitHubName": "totutotu",
+    "joinDate": {
       "month": 9,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2019
     }
   },
   {
-    "name": "mikko",
-    "githubName": "mahtis",
-    "joinedDate": {
+    "name": "Mikko",
+    "gitHubName": "mahtis",
+    "joinDate": {
       "month": 12,
       "year": 2017
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2018
     }
   },
   {
     "name": "Terho",
-    "githubName": "qzuw",
-    "joinedDate": {
+    "gitHubName": "qzuw",
+    "joinDate": {
       "month": 3,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2019
     }
   },
   {
     "name": "Sasu",
-    "githubName": "sasumaki",
-    "joinedDate": {
+    "gitHubName": "sasumaki",
+    "joinDate": {
       "month": 5,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 7,
       "year": 2019
     }
   },
   {
     "name": "Ilkka",
-    "githubName": "ikuisma",
-    "joinedDate": {
+    "gitHubName": "ikuisma",
+    "joinDate": {
       "month": 5,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2019
     }
   },
   {
     "name": "Rimi",
-    "githubName": "Rochet2",
-    "joinedDate": {
+    "gitHubName": "Rochet2",
+    "joinDate": {
       "month": 12,
       "year": 2018
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2019
     }
   },
   {
     "name": "Esa",
-    "githubName": "esakemp",
-    "joinedDate": {
+    "gitHubName": "esakemp",
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2020
     }
   },
   {
     "name": "Jere",
-    "githubName": "xneme",
-    "joinedDate": {
+    "gitHubName": "xneme",
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2020
     }
   },
   {
     "name": "Tero",
-    "githubName": "granigan",
-    "joinedDate": {
+    "gitHubName": "granigan",
+    "joinDate": {
       "month": 5,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2020
     }
   },
   {
     "name": "Olli",
-    "githubName": "woltsu",
-    "joinedDate": {
+    "gitHubName": "woltsu",
+    "joinDate": {
       "month": 7,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 6,
       "year": 2020
     }
   },
   {
     "name": "Joona",
-    "githubName": "cxcorp",
-    "joinedDate": {
+    "gitHubName": "cxcorp",
+    "joinDate": {
       "month": 9,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2020
     }
   },
   {
     "name": "Marko",
-    "githubName": "markokoskinen2037",
-    "joinedDate": {
+    "gitHubName": "markokoskinen2037",
+    "joinDate": {
       "month": 11,
       "year": 2019
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 2,
       "year": 2021
     }
   },
   {
     "name": "Atte",
-    "githubName": "ajhaa",
-    "joinedDate": {
+    "gitHubName": "ajhaa",
+    "joinDate": {
       "month": 1,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2021
     }
   },
   {
     "name": "Gert",
-    "githubName": "darake",
-    "joinedDate": {
+    "gitHubName": "darake",
+    "joinDate": {
       "month": 2,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2021
     }
   },
   {
     "name": "Kalle",
-    "githubName": "Sendouc",
-    "joinedDate": {
+    "gitHubName": "Sendouc",
+    "joinDate": {
       "month": 2,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2021
     }
   },
   {
     "name": "Kalle",
-    "githubName": "kaltsoon",
-    "joinedDate": {
+    "gitHubName": "kaltsoon",
+    "joinDate": {
       "month": 3,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2022
     }
   },
   {
     "name": "Basse",
-    "githubName": "joonashak",
-    "joinedDate": {
+    "gitHubName": "joonashak",
+    "joinDate": {
       "month": 5,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2021
     }
   },
   {
     "name": "Saara",
-    "githubName": "saarasat",
-    "joinedDate": {
+    "gitHubName": "saarasat",
+    "joinDate": {
       "month": 9,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2022
     }
   },
   {
     "name": "Roni",
-    "githubName": "vaahtokarkki",
-    "joinedDate": {
+    "gitHubName": "vaahtokarkki",
+    "joinDate": {
       "month": 9,
       "year": 2020
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2022
     }
   },
   {
     "name": "Otto",
-    "githubName": "otahontas",
-    "joinedDate": {
+    "gitHubName": "otahontas",
+    "joinDate": {
       "month": 2,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2022
     }
   },
   {
     "name": "Ilmari",
-    "githubName": "ilmarikyl",
-    "joinedDate": {
+    "gitHubName": "ilmarikyl",
+    "joinDate": {
       "month": 3,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2022
     }
   },
   {
     "name": "Leo",
-    "githubName": "LeoVaris",
-    "joinedDate": {
+    "gitHubName": "LeoVaris",
+    "joinDate": {
       "month": 4,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2022
     }
   },
   {
     "name": "Olli",
-    "githubName": "ollikehy",
-    "joinedDate": {
+    "gitHubName": "ollikehy",
+    "joinDate": {
       "month": 4,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2022
     }
   },
   {
     "name": "Petri",
-    "githubName": "Petrimus",
-    "joinedDate": {
+    "gitHubName": "Petrimus",
+    "joinDate": {
       "month": 6,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2022
     }
   },
   {
     "name": "Mitja",
-    "githubName": "dogamak",
-    "joinedDate": {
+    "gitHubName": "dogamak",
+    "joinDate": {
       "month": 10,
       "year": 2021
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2022
     }
   },
   {
     "name": "Sami",
-    "githubName": "SNurmivaara",
-    "joinedDate": {
+    "gitHubName": "SNurmivaara",
+    "joinDate": {
       "month": 1,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2022
     }
   },
   {
     "name": "Valtteri",
-    "githubName": "nettivastaava",
-    "joinedDate": {
+    "gitHubName": "nettivastaava",
+    "joinDate": {
       "month": 2,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 12,
       "year": 2022
     }
   },
   {
     "name": "Veikko",
-    "githubName": "Veikkosuhonen",
+    "gitHubName": "Veikkosuhonen",
     "linkedInName": "veikko-suhonen-394751230",
-    "joinedDate": {
+    "joinDate": {
       "month": 2,
       "year": 2022
     }
   },
   {
     "name": "Miko",
-    "githubName": "Keskimaki",
+    "gitHubName": "Keskimaki",
     "linkedInName": "keskimaki",
-    "joinedDate": {
+    "joinDate": {
       "month": 5,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 3,
       "year": 2024
     }
   },
   {
     "name": "Laura",
-    "githubName": "sinikala",
-    "joinedDate": {
+    "gitHubName": "sinikala",
+    "joinDate": {
       "month": 6,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 5,
       "year": 2023
     }
   },
   {
     "name": "Outi",
-    "githubName": "outisa",
-    "joinedDate": {
+    "gitHubName": "outisa",
+    "joinDate": {
       "month": 8,
       "year": 2022
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 7,
       "year": 2023
     }
   },
   {
     "name": "Pekka",
-    "githubName": "iPegii",
-    "joinedDate": {
+    "gitHubName": "iPegii",
+    "joinDate": {
       "month": 1,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 4,
       "year": 2024
     }
   },
   {
     "name": "Henri",
-    "githubName": "HRemonen",
-    "joinedDate": {
+    "gitHubName": "HRemonen",
+    "joinDate": {
       "month": 1,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2025
     }
   },
   {
     "name": "Erika",
-    "githubName": "erikao1998",
-    "joinedDate": {
+    "gitHubName": "erikao1998",
+    "joinDate": {
       "month": 4,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 8,
       "year": 2024
     }
   },
   {
     "name": "Arttu",
-    "githubName": "ShootingStar91",
-    "joinedDate": {
+    "gitHubName": "ShootingStar91",
+    "joinDate": {
       "month": 4,
       "year": 2023
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 9,
       "year": 2024
     }
   },
   {
     "name": "Valtteri",
-    "githubName": "valtterikantanen",
-    "joinedDate": {
+    "gitHubName": "valtterikantanen",
+    "joinDate": {
       "month": 9,
       "year": 2023
     }
   },
   {
     "name": "Riku",
-    "githubName": "rikurauhala",
+    "gitHubName": "rikurauhala",
     "linkedInName": "rikurauhala",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2024
     }
   },
   {
     "name": "Aleksandr",
-    "githubName": "AleksTeresh",
+    "gitHubName": "AleksTeresh",
     "linkedInName": "aleksandr-tereshchenko",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
       "year": 2024
     },
-    "alumnDate": {
+    "exitDate": {
       "month": 1,
       "year": 2025
     }
   },
   {
     "name": "Alexander",
-    "githubName": "alwengel",
+    "gitHubName": "alwengel",
     "linkedInName": "alexander-engelhardt-8940072b0",
-    "joinedDate": {
+    "joinDate": {
       "month": 3,
+      "year": 2024
+    },
+    "exitDate": {
+      "month": 8,
       "year": 2024
     }
   },
   {
     "name": "Tuomas",
-    "githubName": "tfhuhtal",
+    "gitHubName": "tfhuhtal",
     "linkedInName": "tuomas-huhtala-7409b6239",
-    "joinedDate": {
+    "joinDate": {
       "month": 6,
       "year": 2024
     }
   },
   {
     "name": "Venla",
-    "githubName": "ranven",
+    "gitHubName": "ranven",
     "linkedInName": "venla-rantanen",
-    "joinedDate": {
+    "joinDate": {
       "month": 8,
       "year": 2024
     }
   },
   {
     "name": "Santeri",
-    "githubName": "santeri0200",
+    "gitHubName": "santeri0200",
     "linkedInName": "santeri0200",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     }
   },
-    {
+  {
     "name": "Ben",
-    "githubName": "sutigit",
+    "gitHubName": "sutigit",
     "linkedInName": "ben-panyanil",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     }
   },
   {
     "name": "Joonas",
-    "githubName": "joonas-a",
+    "gitHubName": "joonas-a",
     "linkedInName": "joonasahovalli",
-    "joinedDate": {
+    "joinDate": {
       "month": 1,
       "year": 2025
     }
