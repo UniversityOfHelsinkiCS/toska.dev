@@ -3,7 +3,7 @@
 import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { Stack } from "@mui/material";
 
-import { Toskamopo } from "./Toskamopo";
+import { Toskamopo } from "@/components/Toskamopo";
 
 export const AboutUs = async ({ introText }: { introText: string }) => {
   return (
