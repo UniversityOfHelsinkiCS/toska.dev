@@ -1,9 +1,15 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+
 import { Project } from "@/types";
+import { projects } from "@/types/project";
 
 const projectsDir = path.join(process.cwd(), "src", "content", "projects");
+
+const isValidProjectName = (name: string): name is Project["name"] => {
+  return projects.includes(name as any);
+};
 
 export async function getProjects(): Promise<Project[]> {
   const projectFiles = fs.readdirSync(projectsDir);
@@ -26,11 +32,17 @@ export async function getProjects(): Promise<Project[]> {
           throw new Error(`Invalid metadata in ${file}`);
         }
 
+        const name = file.replace(".md", "");
+
+        if (!isValidProjectName(name)) {
+          throw new Error(`Invalid project name: ${file}`);
+        }
+
         return {
           content: parsed.content,
           date: parsed.data.date as string,
           gitHub: parsed.data.github as string,
-          name: file.replace(".md", ""),
+          name,
           title: parsed.data.title as string,
         };
       })
@@ -39,11 +51,15 @@ export async function getProjects(): Promise<Project[]> {
   return projects;
 }
 
-export async function getProjectByName(name: string) {
+export async function getProjectByName(name: string): Promise<Project | null> {
   const filePath = path.join(projectsDir, `${name}.md`);
 
   if (!fs.existsSync(filePath)) {
     return null;
+  }
+
+  if (!isValidProjectName(name)) {
+    throw new Error(`Invalid project name: ${name}`);
   }
 
   const fileContent = fs.readFileSync(filePath, "utf8");
@@ -54,10 +70,10 @@ export async function getProjectByName(name: string) {
   }
 
   return {
-    name,
-    title: parsed.data.title,
     content: parsed.content,
     date: parsed.data.date,
     gitHub: parsed.data.github,
+    name,
+    title: parsed.data.title,
   };
 }
