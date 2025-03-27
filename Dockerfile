@@ -16,7 +16,7 @@ FROM registry.access.redhat.com/ubi9/nodejs-18-minimal
 
 RUN npm install -g serve
 
-COPY --from=build-stage /opt/app-root/src/out/ /opt/app-root/src
+COPY --from=build-stage /opt/app-root/src/.next/ /opt/app-root/src
 
 EXPOSE 8080
 
