@@ -1,11 +1,11 @@
-"use client";
+"use server";
 
 import { Grid2 as Grid } from "@mui/material";
 
 import { Project } from "src/types";
 import { ProjectCard } from "./ProjectCard";
 
-export const Projects = ({ projects }: { projects: Project[] }) => {
+export const Projects = async ({ projects }: { projects: Project[] }) => {
   return (
     <Grid container spacing={2}>
       {projects.map((project) => (

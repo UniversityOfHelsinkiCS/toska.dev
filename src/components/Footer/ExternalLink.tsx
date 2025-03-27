@@ -1,9 +1,9 @@
-"use client";
+"use server";
 
 import { Link } from "@mui/material";
 import NextLink from "next/link";
 
-export const ExternalLink = ({
+export const ExternalLink = async ({
   href,
   icon,
   text,

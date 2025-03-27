@@ -1,22 +1,21 @@
-"use client";
+"use server";
 
 import {
-  Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
   Divider,
-  Link,
   Stack,
   Typography,
 } from "@mui/material";
-import NextLink from "next/link";
 
 import { MarkdownContainer } from "src/components/MarkdownContainer";
 import { Project } from "src/types";
+import { ShowSourceButton } from "./ShowSourceButton";
+import { ReadMoreButton } from "./ReadMoreButton";
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = async ({ project }: { project: Project }) => {
   return (
     <Card
       key={project.name}
@@ -48,25 +47,8 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           justifyContent="space-between"
           sx={{ width: "100%" }}
         >
-          <Link
-            href={`https://github.com/UniversityOfHelsinkiCS/${project.gitHub}`}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Button
-              sx={{
-                color: (theme) => theme.palette.secondary.light,
-                "&:hover": {
-                  color: (theme) => theme.palette.secondary.main,
-                },
-              }}
-            >
-              Näytä lähdekoodi
-            </Button>
-          </Link>
-          <NextLink href={`/projects/${project.name}`}>
-            <Button color="primary">Lue lisää</Button>
-          </NextLink>
+          <ShowSourceButton repositoryName={project.gitHub} />
+          <ReadMoreButton projectName={project.name} />
         </Stack>
       </CardActions>
     </Card>

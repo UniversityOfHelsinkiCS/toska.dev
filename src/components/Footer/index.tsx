@@ -1,4 +1,4 @@
-"use client";
+"use server";
 
 import {
   Email as EmailIcon,
@@ -11,7 +11,7 @@ import Image from "next/image";
 import { Section } from "@/components/Section";
 import { ExternalLink } from "./ExternalLink";
 
-export const Footer = () => {
+export const Footer = async () => {
   const footerItems = [
     {
       key: "email",
