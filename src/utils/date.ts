@@ -1,6 +1,6 @@
 "use client";
 
-import { Date } from "src/types";
+import { Date } from "@/types";
 
 const formatMonth = (month: number) => {
   if (month < 10) {

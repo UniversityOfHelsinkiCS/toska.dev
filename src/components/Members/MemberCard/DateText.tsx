@@ -3,8 +3,8 @@
 import { Login as LoginIcon, Logout as LogoutIcon } from "@mui/icons-material";
 import { Stack, Tooltip, Typography } from "@mui/material";
 
-import { Date } from "src/types";
-import { formatDate } from "src/utils/date";
+import { Date } from "@/types";
+import { formatDate } from "@/utils/date";
 
 export const DateText = ({
   date,

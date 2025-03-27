@@ -1,4 +1,4 @@
-"use client";
+"use server";
 
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
@@ -7,7 +7,7 @@ import members from "@/content/members.json";
 import { Member } from "@/types";
 import { MemberGrid } from "./MemberGrid";
 
-export const Members = () => {
+export const Members = async () => {
   const membersWithMemberNumbers: Member[] = members
     .map((member, index) => ({
       ...member,

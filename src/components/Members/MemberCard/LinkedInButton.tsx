@@ -1,9 +1,13 @@
-"use client";
+"use server";
 
 import { LinkedIn as LinkedInIcon } from "@mui/icons-material";
 import { Link } from "@mui/material";
 
-export const LinkedInButton = ({ linkedInName }: { linkedInName?: string }) => {
+export const LinkedInButton = async ({
+  linkedInName,
+}: {
+  linkedInName?: string;
+}) => {
   if (!linkedInName) {
     return null;
   }

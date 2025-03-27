@@ -1,6 +1,6 @@
 "use server";
 
-import { MarkdownContainer } from "src/components/MarkdownContainer";
+import { MarkdownContainer } from "@/components/MarkdownContainer";
 
 export const AboutUs = async ({ introText }: { introText: string }) => {
   return <MarkdownContainer value={introText} />;

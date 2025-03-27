@@ -1,15 +1,15 @@
-"use client";
+"use server";
 
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 
-import { Member } from "src/types";
+import { Member } from "@/types";
 import { DateText } from "./DateText";
 import { GitHubButton } from "./GitHubButton";
 import { LinkedInButton } from "./LinkedInButton";
 import { NumberChip } from "./NumberChip";
 import { ProfilePicture } from "./ProfilePicture";
 
-export const MemberCard = ({ member }: { member: Member }) => {
+export const MemberCard = async ({ member }: { member: Member }) => {
   return (
     <Card variant="outlined">
       <CardContent>

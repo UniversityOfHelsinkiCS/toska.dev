@@ -2,7 +2,7 @@
 
 import { Grid2 as Grid } from "@mui/material";
 
-import { Project } from "src/types";
+import { Project } from "@/types";
 import { ProjectCard } from "./ProjectCard";
 
 export const Projects = async ({ projects }: { projects: Project[] }) => {

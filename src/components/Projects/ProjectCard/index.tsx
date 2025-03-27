@@ -9,8 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 
-import { MarkdownContainer } from "src/components/MarkdownContainer";
-import { Project } from "src/types";
+import { MarkdownContainer } from "@/components/MarkdownContainer";
+import { Project } from "@/types";
 import { ShowSourceButton } from "./ShowSourceButton";
 import { ReadMoreButton } from "./ReadMoreButton";
 import { PreviewImage } from "./PreviewImage";

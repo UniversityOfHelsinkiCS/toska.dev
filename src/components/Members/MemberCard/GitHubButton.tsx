@@ -1,9 +1,9 @@
-"use client";
+"use server";
 
 import { GitHub as GitHubIcon } from "@mui/icons-material";
 import { Link } from "@mui/material";
 
-export const GitHubButton = ({ gitHubName }: { gitHubName: string }) => {
+export const GitHubButton = async ({ gitHubName }: { gitHubName: string }) => {
   return (
     <Link
       color="inherit"
