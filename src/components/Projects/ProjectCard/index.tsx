@@ -4,7 +4,6 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardMedia,
   Divider,
   Stack,
   Typography,
@@ -14,6 +13,7 @@ import { MarkdownContainer } from "src/components/MarkdownContainer";
 import { Project } from "src/types";
 import { ShowSourceButton } from "./ShowSourceButton";
 import { ReadMoreButton } from "./ReadMoreButton";
+import { PreviewImage } from "./PreviewImage";
 
 export const ProjectCard = async ({ project }: { project: Project }) => {
   return (
@@ -22,12 +22,7 @@ export const ProjectCard = async ({ project }: { project: Project }) => {
       sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
       variant="outlined"
     >
-      <CardMedia
-        alt={`Kuvakaappaus projektista ${project.title}`}
-        component="img"
-        height={200}
-        image={`/projects/${project.name}.png`}
-      />
+      <PreviewImage projectName={project.name} projectTitle={project.title} />
       <CardContent>
         <Typography component="h3" variant="h6">
           {project.title}

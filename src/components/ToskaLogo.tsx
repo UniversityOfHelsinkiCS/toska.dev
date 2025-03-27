@@ -2,6 +2,7 @@
 
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import toskaLogo from "public/assets/toska-logo.svg";
 
 export const ToskaLogo = async () => {
   return (
@@ -9,9 +10,8 @@ export const ToskaLogo = async () => {
       <Image
         alt="Toska logo"
         height={200}
-        loading="eager"
         priority
-        src="./assets/toska-logo.svg"
+        src={toskaLogo}
         title="Toska logo, design by Jukka Päivinen"
         width={300}
       />
