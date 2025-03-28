@@ -36,7 +36,7 @@ export default async function ProjectPage({ params }: { params: Props }) {
   return (
     <Container maxWidth="md">
       <Stack gap={2} sx={{ py: 4 }}>
-        <Typography component="h2" variant="h2">
+        <Typography component="h2" sx={{ typography: { xs: "h4", sm: "h2" } }}>
           {project.title}
         </Typography>
         <Link
