@@ -9,9 +9,10 @@ import { Projects } from "@/components/Projects";
 import { Section } from "@/components/Section";
 import { ToskaLogo } from "@/components/ToskaLogo";
 import { getProjects } from "@/lib/projects";
+import { getTitle } from "@/utils/metadata";
 
 export const metadata: Metadata = {
-  title: "Toska",
+  title: getTitle(),
   description: "Toskan kotisivut",
 };
 

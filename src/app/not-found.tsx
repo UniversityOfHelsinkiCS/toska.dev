@@ -1,7 +1,14 @@
 import { Container, Link, Stack, Typography } from "@mui/material";
+import { Metadata } from "next";
 import NextLink from "next/link";
 
 import { Toskamopo } from "@/components/Toskamopo";
+import { getTitle } from "@/utils/metadata";
+
+export const metadata: Metadata = {
+  title: getTitle(["404"]),
+  description: "Sivua ei löytynyt",
+};
 
 const NotFound = () => {
   return (
