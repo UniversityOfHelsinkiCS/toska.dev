@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     default: "Toska",
     template: "%s | Toska",
   },
-  description: "Toskan kotisivut",
+  description:
+    "Toska on Helsingin yliopiston tietojenkäsittelytieteen osaston sovelluskehitysakatemia, joka kehittää yliopiston opetushallinnollisia sovelluksia",
   creator: "Toska",
   authors: [{ name: "Toska", url: "https://toska.dev" }],
   themeColor: "#e99939",
