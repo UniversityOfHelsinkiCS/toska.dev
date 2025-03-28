@@ -7,5 +7,4 @@ export type Member = {
   memberNumber?: number;
   joinDate: Date;
   exitDate?: Date;
-  projects?: string[];
 };
