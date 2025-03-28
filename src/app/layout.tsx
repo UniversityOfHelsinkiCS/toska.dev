@@ -1,12 +1,16 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Lato } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { TopBar } from "@/components/TopBar";
 import { theme } from "@/utils/theme";
+
+export const viewPort: Viewport = {
+  themeColor: "#e99939",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +21,6 @@ export const metadata: Metadata = {
     "Toska on Helsingin yliopiston tietojenkäsittelytieteen osaston sovelluskehitysakatemia, joka kehittää yliopiston opetushallinnollisia sovelluksia",
   creator: "Toska",
   authors: [{ name: "Toska", url: "https://toska.dev" }],
-  themeColor: "#e99939",
 };
 
 const lato = Lato({
