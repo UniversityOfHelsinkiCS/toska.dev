@@ -9,11 +9,14 @@ import { Projects } from "@/components/Projects";
 import { Section } from "@/components/Section";
 import { ToskaLogo } from "@/components/ToskaLogo";
 import { getProjects } from "@/lib/projects";
-import { getTitle } from "@/utils/metadata";
 
 export const metadata: Metadata = {
-  title: getTitle(),
-  description: "Toskan kotisivut",
+  keywords: [
+    "Toska",
+    "Helsingin yliopisto",
+    "Matemaattis-luonnontieteellinen tiedekunta",
+    "Tietojenkäsittelytieteen laitos",
+  ],
 };
 
 export default async function IndexPage() {

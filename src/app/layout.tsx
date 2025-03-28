@@ -1,11 +1,23 @@
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { Metadata } from "next";
 import { Lato } from "next/font/google";
 
 import { Footer } from "@/components/Footer";
 import { TopBar } from "@/components/TopBar";
 import { theme } from "@/utils/theme";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Toska",
+    template: "%s | Toska",
+  },
+  description: "Toskan kotisivut",
+  creator: "Toska",
+  authors: [{ name: "Toska", url: "https://toska.dev" }],
+  themeColor: "#e99939",
+};
 
 const lato = Lato({
   weight: ["300", "400", "700"],

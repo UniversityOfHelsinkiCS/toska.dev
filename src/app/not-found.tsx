@@ -3,10 +3,9 @@ import { Metadata } from "next";
 import NextLink from "next/link";
 
 import { Toskamopo } from "@/components/Toskamopo";
-import { getTitle } from "@/utils/metadata";
 
 export const metadata: Metadata = {
-  title: getTitle(["404"]),
+  title: "Sivua ei löytynyt",
   description: "Sivua ei löytynyt",
 };
 

@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 
 import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { getProjectByName } from "@/lib/projects";
-import { getTitle } from "@/utils/metadata";
 
 type Props = Promise<{ name: string }>;
 
@@ -20,8 +19,9 @@ export async function generateMetadata({
   const projectName = project?.title || "Tuntematon projekti";
 
   return {
-    title: getTitle([projectName, "Projektit"]),
+    title: projectName,
     description: `${projectName} on Toskan kehittämä sovellus`,
+    keywords: ["Toska", projectName],
   };
 }
 
