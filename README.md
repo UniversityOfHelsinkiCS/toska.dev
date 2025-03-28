@@ -1,4 +1,6 @@
-# Toska
+# Toska.dev
+
+<img height=100 src="public/assets/toska-logo.svg" />
 
 [https://toska.dev](https://toska.dev)
 
@@ -9,14 +11,14 @@
 
 ## Adding content
 
-Content from the site comes from the files in the `content` folder. `.md` files support Markdown syntax as you might be able to guess but notice in order to use other elements than basic bolding and italicized further setup is needed.
+Content from the site comes from the files in the `src/content` folder. Write project descriptions etc. in the Markdown files (`.md`).
 
-### Adding a new projects
+### Projects
 
-1. Make a new .md file to the `content/projects` folder.
+To add a new project, follow these instructions.
 
-- Name of the file is meaningful (decides the URL)
-
+1. Make a new .md file to the `src/content/projects` folder.
+   - Name of the file should be meaningful as it decides the URL
 2. On the top of the .md file add metadata like so:
 
 ```
@@ -32,23 +34,27 @@ title: project's name
 date: Project starting month - Project ending month (if any) e.g. Helmikuu 2020 - Kesäkuu 2021
 
 3. Add the actual content describing the project
+   - First paragraph is what is shown as preview on the front page
+4. Add an image of the project to `public/projects/` in .png format using the same name as the .md made in step 1.
+5. Add the name of the project in [project.ts](./src/types/project.ts) and export its image in [PreviewImage.tsx](./src/components/Projects/ProjectCard/PreviewImage.tsx)
+   - This is done so that the image load immediately when the page is loaded
 
-- First paragraph is what is shown as preview on the front page.
+### Members
 
-4. Add an image (square aspect ratio - recommended approximately 1000x1000) of the project to `public/projects/` in .png format using the same name as the .md made in step 1.
+To add new members or edit exit dates etc., see [members.json](./src/content/members.json).
 
-### intro.md
+Please append new members at the end of the file as it is used to generate the member number!
 
-Text on top below the logo and "Helsingin yliopiston tietojenkäsittelytieteen osaston sovelluskehitysakatemia".
+Structure of `members.json`. See also the [Member](./src/types/member.ts) type.
 
-### members.json
+| Property     | Type                           | Description                                        |
+| ------------ | ------------------------------ | -------------------------------------------------- |
+| name         | string                         | First name                                         |
+| gitHubName   | string                         | GitHub username, also used for fetching the avatar |
+| linkedInName | string?                        | LinkedIn username, see linkedin.com/id/{username}  |
+| joinDate     | {month: number, year: number}  | Month and year of when joined Toska                |
+| exitDate     | {month: number, year: number}? | Month and year of when left Toska if applicable    |
 
-_Note the order in the array is meaningful_
+### Deploying
 
-| Property     | Type                           | Description                                                      |
-| ------------ | ------------------------------ | ---------------------------------------------------------------- |
-| name         | string                         | First name of the members.                                       |
-| gitHubName   | string                         | GitHub user of the member. Also used for fetching the avatar.    |
-| linkedInName | string                         | LinkedIn user of the member.                                     |
-| joinDate     | {month: number, year: number}  | Month and year of when the member joined.                        |
-| exitDate     | {month: number, year: number}? | Month and year of when the member became an alumn if applicable. |
+Pushing to `master` runs CI and pushes to production.
