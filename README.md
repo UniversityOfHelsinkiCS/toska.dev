@@ -47,13 +47,13 @@ Please append new members at the end of the file as it is used to generate the m
 
 Structure of `members.json`. See also the [Member](./src/types/member.ts) type.
 
-| Property     | Type                           | Description                                        |
-| ------------ | ------------------------------ | -------------------------------------------------- |
-| name         | string                         | First name                                         |
-| gitHubName   | string                         | GitHub username, also used for fetching the avatar |
-| linkedInName | string?                        | LinkedIn username, see linkedin.com/id/{username}  |
-| joinDate     | {month: number, year: number}  | Month and year of when joined Toska                |
-| exitDate     | {month: number, year: number}? | Month and year of when left Toska if applicable    |
+| Property       | Type                             | Description                                        |
+| -------------- | -------------------------------- | -------------------------------------------------- |
+| `name`         | string                           | First name                                         |
+| `gitHubName`   | string                           | GitHub username, also used for fetching the avatar |
+| `linkedInName` | string?                          | LinkedIn username, see linkedin.com/id/{username}  |
+| `joinDate`     | { month: number, year: number }  | Month and year of when joined Toska                |
+| `exitDate`     | { month: number, year: number }? | Month and year of when left Toska if applicable    |
 
 ### Deploying
 
