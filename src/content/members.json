@@ -524,5 +524,14 @@
       "month": 1,
       "year": 2025
     }
+  },
+  {
+    "name": "Matias",
+    "gitHubName": "MatiasSinisalo",
+    "linkedInName": "matias-sinisalo",
+    "joinDate": {
+      "month": 4,
+      "year": 2025
+    }
   }
 ]
