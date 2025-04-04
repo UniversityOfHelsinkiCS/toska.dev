@@ -80,6 +80,30 @@
     }
   },
   {
+    "name": "Jemi",
+    "gitHubName": "Chamion",
+    "joinDate": {
+      "month": 7,
+      "year": 2018
+    },
+    "exitDate": {
+      "month": 3,
+      "year": 2019
+    }
+  },
+  {
+    "name": "Mikko",
+    "gitHubName": "laimikko1",
+    "joinDate": {
+      "month": 7,
+      "year": 2018
+    },
+    "exitDate": {
+      "month": 12,
+      "year": 2018
+    }
+  },
+  {
     "name": "Rimi",
     "gitHubName": "Rochet2",
     "joinDate": {
