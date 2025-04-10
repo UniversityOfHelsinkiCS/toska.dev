@@ -476,6 +476,10 @@
     "joinDate": {
       "month": 1,
       "year": 2024
+    },
+    "exitDate": {
+      "month": 4,
+      "year": 2025
     }
   },
   {
