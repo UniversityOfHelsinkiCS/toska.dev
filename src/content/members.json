@@ -565,5 +565,14 @@
       "month": 4,
       "year": 2025
     }
+  },
+  {
+    "name": "Sini",
+    "gitHubName": "SiniCode",
+    "linkedInName": "sini-arkko",
+    "joinDate": {
+      "month": 5,
+      "year": 2025
+    }
   }
 ]
