@@ -528,6 +528,10 @@
     "joinDate": {
       "month": 8,
       "year": 2024
+    },
+    "exitDate": {
+      "month": 7,
+      "year": 2025
     }
   },
   {
@@ -582,6 +586,10 @@
     "joinDate": {
       "month": 6,
       "year": 2025
+    },
+    "exitDate": {
+      "month": 6,
+      "year": 2015
     }
   }
 ]
