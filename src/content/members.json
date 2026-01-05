@@ -589,7 +589,7 @@
       "year": 2025
     }
   },
-   {
+  {
     "name": "Jasse",
     "gitHubName": "jayzstep",
     "linkedInName": "jasse-merivirta",
@@ -600,6 +600,14 @@
     "exitDate": {
       "month": 1,
       "year": 2027
+    }
+  },
+  {
+    "name": "Aaro",
+    "gitHubName": "iritmaximus",
+    "joinDate": {
+      "month": 1,
+      "year": 2026
     }
   }
 ]
