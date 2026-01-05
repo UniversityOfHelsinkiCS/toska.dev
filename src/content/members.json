@@ -588,5 +588,18 @@
       "month": 6,
       "year": 2025
     }
+  },
+   {
+    "name": "Jasse",
+    "gitHubName": "jayzstep",
+    "linkedInName": "jasse-merivirta",
+    "joinDate": {
+      "month": 1,
+      "year": 2026
+    },
+    "exitDate": {
+      "month": 1,
+      "year": 2027
+    }
   }
 ]
