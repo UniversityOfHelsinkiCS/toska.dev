@@ -609,5 +609,12 @@
       "month": 1,
       "year": 2026
     }
-  }
+  },
+  {
+    "name": "Helmer",
+    "gitHubName": "lxhelmer",
+    "joinDate": {
+      "month": 11,
+      "year": 2025
+    }
 ]
