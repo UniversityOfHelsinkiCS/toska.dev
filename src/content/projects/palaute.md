@@ -1,6 +1,6 @@
 ---
 github: palaute
-title: Palaute (Norppa)
+title: Norppa (Palaute)
 date: Maaliskuu 2021 -
 ---
 

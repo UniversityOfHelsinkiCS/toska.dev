@@ -1,11 +1,11 @@
 export const projects = [
-  "fuksilaiterekisteri",
   "oodikone",
   "palaute",
-  "revita",
-  "suoritustarkistin",
-  "tilannekuvalomake",
   "currechat",
+  "tilannekuvalomake",
+  "suoritustarkistin",
+  "revita",
+  "fuksilaiterekisteri",
 ] as const;
 
 export type ProjectName = (typeof projects)[number];
