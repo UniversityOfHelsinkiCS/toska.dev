@@ -7,6 +7,7 @@ import palauteImage from "public/projects/palaute.png";
 import revitaImage from "public/projects/revita.png";
 import suoritustarkistinImage from "public/projects/suoritustarkistin.png";
 import tilannekuvalomakeImage from "public/projects/tilannekuvalomake.png";
+import currechatImage from "public/projects/currechat.jpeg";
 import { ProjectName } from "@/types/project";
 
 const projectImages: Record<ProjectName, StaticImageData> = {
@@ -16,6 +17,7 @@ const projectImages: Record<ProjectName, StaticImageData> = {
   revita: revitaImage,
   suoritustarkistin: suoritustarkistinImage,
   tilannekuvalomake: tilannekuvalomakeImage,
+  currechat: currechatImage,
 } as const;
 
 export const PreviewImage = ({

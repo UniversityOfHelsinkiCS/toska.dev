@@ -5,6 +5,7 @@ export const projects = [
   "revita",
   "suoritustarkistin",
   "tilannekuvalomake",
+  "currechat",
 ] as const;
 
 export type ProjectName = (typeof projects)[number];
