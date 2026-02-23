@@ -629,5 +629,15 @@
       "month": 1,
       "year": 2026
     }
+  },
+  {
+    "name": "Katri",
+    "gitHubName": "kaabero",
+    "linkedInName": "katri-laamala",
+    "joinDate": {
+      "month": 2,
+      "year": 2026
+    }
   }
+  
 ]
