@@ -1,4 +1,4 @@
-**Toska** on tietojenkäsittelytieteen osaston sovelluskehitysakatemia, jonka tärkeimpänä tehtävänä on kehittää yliopiston opetushallinnollisia sovelluksia. Tähän sovelluskaartiin kuuluu kaikenlaista kurssipalautteesta opiskelijoiden opintojen edistymisen dataperustaiseen seurantaan.
+**Toska** on tietojenkäsittelytieteen osaston sovelluskehitysakatemia, jonka tärkeimpänä tehtävänä on kehittää yliopiston opintohallinnon sovelluksia. Tähän sovelluskaartiin kuuluu kaikenlaista kurssipalautteesta opiskelijoiden opintojen edistymisen dataperustaiseen seurantaan.
 
 Toska palkkaa innokkaita opiskelijoita noin kolmen kuukauden välein vuoden sopimuksella. Tämä Toskasykli johtaa uniikkiin työympäristöön, jossa juniorikehittäjästä kasvaa tiimin seniori. Sekä koodista että dokumentaatiosta on tehtävä laadukasta, sillä tekijä tulee siirtämään vastuun projektista seuraavalle.
 
