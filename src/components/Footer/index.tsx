@@ -62,7 +62,7 @@ export const Footer = async () => {
               >
                 &copy;
               </Link>{" "}
-              2017–2025 Toska
+              2017–{new Date().getFullYear()} Toska
             </Typography>
           </Stack>
         </Box>
