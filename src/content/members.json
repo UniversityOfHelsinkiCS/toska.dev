@@ -588,7 +588,7 @@
       "year": 2025
     }
   },
-   {
+  {
     "name": "Viivi",
     "gitHubName": "ViLP357",
     "linkedInName": "-",
@@ -642,6 +642,13 @@
       "month": 2,
       "year": 2026
     }
+  },
+  {
+    "name": "Daniel",
+    "gitHubName": "e11-0a",
+    "joinDate": {
+      "month": 5,
+      "year": 2026
+    }
   }
-  
 ]
