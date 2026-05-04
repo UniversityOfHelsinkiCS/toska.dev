@@ -650,5 +650,14 @@
       "month": 5,
       "year": 2026
     }
-  }
+  },
+  {
+    "name": "Akseli",
+    "gitHubName": "akskokki",
+    "linkedInName": "akseli-kokki",
+    "joinDate": {
+      "month": 5,
+      "year": 2026
+    }
+  },
 ]
