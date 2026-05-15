@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi9/nodejs-18-minimal AS build-stage
 ENV TZ="Europe/Helsinki"
 
 WORKDIR /opt/app-root/src
-
+RUN curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh -s -- --ci
 COPY package* ./
 
 RUN npm ci
