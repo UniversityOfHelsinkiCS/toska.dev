@@ -1,10 +1,9 @@
-FROM registry.access.redhat.com/ubi9/nodejs-18-minimal AS build-stage
+FROM node:24 AS build-stage
 
 ENV TZ="Europe/Helsinki"
 
 WORKDIR /opt/app-root/src
-RUN curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh -s -- --ci
-COPY package* ./
+COPY package* .npmrc ./
 
 RUN npm ci
 
@@ -12,7 +11,7 @@ COPY . .
 
 RUN npm run build
 
-FROM registry.access.redhat.com/ubi9/nodejs-18-minimal
+FROM node:24
 
 ENV NODE_ENV=production
 
@@ -22,6 +21,7 @@ COPY --from=build-stage /opt/app-root/src/.next/ ./.next/
 COPY --from=build-stage /opt/app-root/src/public/ ./public/
 COPY --from=build-stage /opt/app-root/src/package.json ./package.json
 COPY --from=build-stage /opt/app-root/src/package-lock.json ./package-lock.json
+COPY --from=build-stage /opt/app-root/src/.npmrc ./.npmrc
 COPY --from=build-stage /opt/app-root/src/src/content ./src/content
 
 RUN npm ci
