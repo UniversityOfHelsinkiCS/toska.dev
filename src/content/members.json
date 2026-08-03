@@ -672,5 +672,14 @@
       "month": 5,
       "year": 2026
     }
+  },
+  {
+    "name": "Tony",
+    "gitHubName": "lamtonylam",
+    "linkedInName": "lamtonylam",
+    "joinDate": {
+      "month": 8,
+      "year": 2026
+    }
   }
 ]
