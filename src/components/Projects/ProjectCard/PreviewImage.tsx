@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 
 import fuksilaiterekisteriImage from "public/projects/fuksilaiterekisteri.png";
 import oodikoneImage from "public/projects/oodikone.png";
-import palauteImage from "public/projects/norppa.jpeg";
+import norppaImage from "public/projects/norppa.jpeg";
 import revitaImage from "public/projects/revita.png";
 import suoritustarkistinImage from "public/projects/suoritustarkistin.png";
 import tilannekuvalomakeImage from "public/projects/tilannekuvalomake.png";
@@ -16,7 +16,7 @@ import { ProjectName } from "@/types/project";
 const projectImages: Record<ProjectName, StaticImageData> = {
   fuksilaiterekisteri: fuksilaiterekisteriImage,
   oodikone: oodikoneImage,
-  palaute: palauteImage,
+  norppa: norppaImage,
   revita: revitaImage,
   suoritustarkistin: suoritustarkistinImage,
   tilannekuvalomake: tilannekuvalomakeImage,

@@ -1,6 +1,6 @@
 export const projects = [
+  "norppa",
   "oodikone",
-  "palaute",
   "currechat",
   "tilannekuvalomake",
   "suoritustarkistin",
