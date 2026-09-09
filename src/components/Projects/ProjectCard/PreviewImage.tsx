@@ -8,7 +8,7 @@ import revitaImage from "public/projects/revita.png";
 import suoritustarkistinImage from "public/projects/suoritustarkistin.png";
 import tilannekuvalomakeImage from "public/projects/tilannekuvalomake.png";
 import currechatImage from "public/projects/currechat.jpeg";
-import polkuImage from "public/projects/polku.jpg";
+import polkuImage from "public/projects/polku.png";
 import riskiImage from "public/projects/risk-i.png";
 import prethesisImage from "public/projects/prethesis.png";
 import { ProjectName } from "@/types/project";
