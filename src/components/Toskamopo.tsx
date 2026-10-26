@@ -1,5 +1,3 @@
-"use server";
-
 import Image from "next/image";
 
 import toskaMopo from "public/assets/toska-mopo.png";

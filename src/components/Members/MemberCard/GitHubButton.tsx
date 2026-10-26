@@ -1,5 +1,3 @@
-"use server";
-
 import { GitHub as GitHubIcon } from "@mui/icons-material";
 import { Link } from "@mui/material";
 

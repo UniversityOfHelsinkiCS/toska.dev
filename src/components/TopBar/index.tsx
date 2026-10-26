@@ -1,5 +1,3 @@
-"use server";
-
 import { AppBar, Box, Container, Toolbar } from "@mui/material";
 import { NavigationItems } from "./NavigationItems";
 

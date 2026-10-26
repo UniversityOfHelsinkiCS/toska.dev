@@ -1,5 +1,3 @@
-"use server";
-
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 
 import { Member } from "@/types";

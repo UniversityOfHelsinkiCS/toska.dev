@@ -1,5 +1,3 @@
-"use server";
-
 import { Grid2 as Grid } from "@mui/material";
 
 import { Project } from "@/types";

@@ -1,5 +1,3 @@
-"use server";
-
 import {
   Email as EmailIcon,
   GitHub as GitHubIcon,

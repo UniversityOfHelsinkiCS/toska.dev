@@ -1,5 +1,3 @@
-"use server";
-
 import { Button } from "@mui/material";
 import NextLink from "next/link";
 

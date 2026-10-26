@@ -1,5 +1,3 @@
-"use server";
-
 import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { Stack } from "@mui/material";
 

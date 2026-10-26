@@ -1,5 +1,3 @@
-"use server";
-
 import { LinkedIn as LinkedInIcon } from "@mui/icons-material";
 import { Link } from "@mui/material";
 
