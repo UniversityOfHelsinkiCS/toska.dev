@@ -146,3 +146,4 @@ cypress/
 # additional inclusions here
 
 # exclusions here
+!nginx.conf

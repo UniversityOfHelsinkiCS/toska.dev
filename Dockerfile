@@ -9,23 +9,11 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run build
+RUN npm run build && chmod -R a+rX out
 
-FROM node:24
+FROM nginxinc/nginx-unprivileged:stable-alpine
 
-ENV NODE_ENV=production
-
-WORKDIR /opt/app-root/src
-
-COPY --from=build-stage /opt/app-root/src/.next/ ./.next/
-COPY --from=build-stage /opt/app-root/src/public/ ./public/
-COPY --from=build-stage /opt/app-root/src/package.json ./package.json
-COPY --from=build-stage /opt/app-root/src/package-lock.json ./package-lock.json
-COPY --from=build-stage /opt/app-root/src/.npmrc ./.npmrc
-COPY --from=build-stage /opt/app-root/src/src/content ./src/content
-
-RUN npm ci
+COPY --chmod=644 nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build-stage /opt/app-root/src/out/ /usr/share/nginx/html/
 
 EXPOSE 8080
-
-CMD ["npm", "start", "--", "-p", "8080"]

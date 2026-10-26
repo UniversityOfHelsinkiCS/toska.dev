@@ -145,6 +145,7 @@ cypress.env.json
 # additional inclusions here
 
 # exclusions here
+!nginx.conf
 !.env.template
 !.env.sample
 !.env.example
