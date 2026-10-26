@@ -13,6 +13,7 @@ export const viewPort: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://toska.dev"),
   title: {
     default: "Toska",
     template: "%s | Toska",

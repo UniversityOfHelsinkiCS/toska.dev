@@ -5,8 +5,15 @@ import { notFound } from "next/navigation";
 
 import { MarkdownContainer } from "@/components/MarkdownContainer";
 import { getProjectByName } from "@/lib/projects";
+import { projects } from "@/types/project";
 
 type Props = Promise<{ name: string }>;
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return projects.map((name) => ({ name }));
+}
 
 export async function generateMetadata({
   params,
