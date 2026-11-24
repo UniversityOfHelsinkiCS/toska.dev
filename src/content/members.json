@@ -611,6 +611,10 @@
     "joinDate": {
       "month": 11,
       "year": 2025
+    },
+    "exitDate": {
+      "month": 11,
+      "year": 2026
     }
   },
   {
@@ -619,6 +623,10 @@
     "joinDate": {
       "month": 11,
       "year": 2025
+    },
+    "exitDate": {
+      "month": 11,
+      "year": 2026
     }
   },
   {
